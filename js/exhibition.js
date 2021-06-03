@@ -9,22 +9,22 @@
       number: "01",
       img: [
         {
-          l: "/img/renova/01/0101_1x.jpg",
-          m: "/img/renova/01/0101_2x.jpg",
-          h: "/img/renova/01/0101_3x.jpg"
+          l: "./img/renova/01/0101_1x.jpg",
+          m: "./img/renova/01/0101_2x.jpg",
+          h: "./img/renova/01/0101_3x.jpg"
         },
         {
-          l: "/img/renova/01/0102_1x.jpg",
-          m: "/img/renova/01/0102_2x.jpg",
-          h: "/img/renova/01/0102_3x.jpg"
+          l: "./img/renova/01/0102_1x.jpg",
+          m: "./img/renova/01/0102_2x.jpg",
+          h: "./img/renova/01/0102_3x.jpg"
         },
         {
-          l: "/img/renova/01/0103_1x.jpg",
-          m: "/img/renova/01/0103_2x.jpg",
-          h: "/img/renova/01/0103_3x.jpg"
+          l: "./img/renova/01/0103_1x.jpg",
+          m: "./img/renova/01/0103_2x.jpg",
+          h: "./img/renova/01/0103_3x.jpg"
         }
       ],
-      map: "/img/renova/01/mapA_01.svg",
+      map: "./img/renova/01/mapA_01.svg",
       venue: "A",
       title: "輪轉世紀 — 軌跡百年",
       desciption:
@@ -34,17 +34,17 @@
       number: "02",
       img: [
         {
-          l: "/img/renova/02/0201_1x.jpg",
-          m: "/img/renova/02/0201_2x.jpg",
-          h: "/img/renova/02/0201_3x.jpg"
+          l: "./img/renova/02/0201_1x.jpg",
+          m: "./img/renova/02/0201_2x.jpg",
+          h: "./img/renova/02/0201_3x.jpg"
         },
         {
-          l: "/img/renova/02/0202_1x.jpg",
-          m: "/img/renova/02/0202_2x.jpg",
-          h: "/img/renova/02/0202_3x.jpg"
+          l: "./img/renova/02/0202_1x.jpg",
+          m: "./img/renova/02/0202_2x.jpg",
+          h: "./img/renova/02/0202_3x.jpg"
         }
       ],
-      map: "/img/renova/02/mapA_02.svg",
+      map: "./img/renova/02/mapA_02.svg",
       venue: "A",
       title: "從台灣鐵道BOT史說起",
       desciption:
@@ -54,12 +54,12 @@
       number: "03",
       img: [
         {
-          l: "/img/renova/03/0301_1x.jpg",
-          m: "/img/renova/03/0301_2x.jpg",
-          h: "/img/renova/03/0301_3x.jpg"
+          l: "./img/renova/03/0301_1x.jpg",
+          m: "./img/renova/03/0301_2x.jpg",
+          h: "./img/renova/03/0301_3x.jpg"
         }
       ],
-      map: "/img/renova/03/mapA_03.svg",
+      map: "./img/renova/03/mapA_03.svg",
       venue: "A",
       title: "台灣高鐵的創生 (1996~2000)",
       desciption:
@@ -69,17 +69,17 @@
       number: "04",
       img: [
         {
-          l: "/img/renova/04/0401_1x.jpg",
-          m: "/img/renova/04/0401_2x.jpg",
-          h: "/img/renova/04/0401_3x.jpg"
+          l: "./img/renova/04/0401_1x.jpg",
+          m: "./img/renova/04/0401_2x.jpg",
+          h: "./img/renova/04/0401_3x.jpg"
         },
         {
-          l: "/img/renova/04/0402_1x.jpg",
-          m: "/img/renova/04/0402_2x.jpg",
-          h: "/img/renova/04/0402_3x.jpg"
+          l: "./img/renova/04/0402_1x.jpg",
+          m: "./img/renova/04/0402_2x.jpg",
+          h: "./img/renova/04/0402_3x.jpg"
         }
       ],
-      map: "/img/renova/04/mapA_04.svg",
+      map: "./img/renova/04/mapA_04.svg",
       venue: "A",
       title: "高鐵工程之最 (2000~2006)",
       desciption:
@@ -89,12 +89,12 @@
       number: "05",
       img: [
         {
-          l: "/img/renova/05/0501_1x.jpg",
-          m: "/img/renova/05/0501_2x.jpg",
-          h: "/img/renova/05/0501_3x.jpg"
+          l: "./img/renova/05/0501_1x.jpg",
+          m: "./img/renova/05/0501_2x.jpg",
+          h: "./img/renova/05/0501_3x.jpg"
         }
       ],
-      map: "/img/renova/05/mapA_05.svg",
+      map: "./img/renova/05/mapA_05.svg",
       venue: "A",
       title: "台灣永續生態的守護",
       desciption:
@@ -104,17 +104,17 @@
       number: "06",
       img: [
         {
-          l: "/img/renova/06/0601_1x.jpg",
-          m: "/img/renova/06/0601_2x.jpg",
-          h: "/img/renova/06/0601_3x.jpg"
+          l: "./img/renova/06/0601_1x.jpg",
+          m: "./img/renova/06/0601_2x.jpg",
+          h: "./img/renova/06/0601_3x.jpg"
         },
         {
-          l: "/img/renova/06/0602_1x.jpg",
-          m: "/img/renova/06/0602_2x.jpg",
-          h: "/img/renova/06/0602_3x.jpg"
+          l: "./img/renova/06/0602_1x.jpg",
+          m: "./img/renova/06/0602_2x.jpg",
+          h: "./img/renova/06/0602_3x.jpg"
         }
       ],
-      map: "/img/renova/06/mapA_06.svg",
+      map: "./img/renova/06/mapA_06.svg",
       venue: "A",
       title: "探索鐵道工程",
       desciption:
@@ -124,12 +124,12 @@
       number: "07",
       img: [
         {
-          l: "/img/renova/07/0701_1x.jpg",
-          m: "/img/renova/07/0701_2x.jpg",
-          h: "/img/renova/07/0701_3x.jpg"
+          l: "./img/renova/07/0701_1x.jpg",
+          m: "./img/renova/07/0701_2x.jpg",
+          h: "./img/renova/07/0701_3x.jpg"
         }
       ],
-      map: "/img/renova/07/mapA_07.svg",
+      map: "./img/renova/07/mapA_07.svg",
       venue: "A",
       title: "鋪天蓋地 — 軌道路床形式",
       desciption:
@@ -139,17 +139,17 @@
       number: "08",
       img: [
         {
-          l: "/img/renova/08/0801_1x.jpg",
-          m: "/img/renova/08/0801_2x.jpg",
-          h: "/img/renova/08/0801_3x.jpg"
+          l: "./img/renova/08/0801_1x.jpg",
+          m: "./img/renova/08/0801_2x.jpg",
+          h: "./img/renova/08/0801_3x.jpg"
         },
         {
-          l: "/img/renova/08/0802_1x.jpg",
-          m: "/img/renova/08/0802_2x.jpg",
-          h: "/img/renova/08/0802_3x.jpg"
+          l: "./img/renova/08/0802_1x.jpg",
+          m: "./img/renova/08/0802_2x.jpg",
+          h: "./img/renova/08/0802_3x.jpg"
         }
       ],
-      map: "/img/renova/08/mapA_08.svg",
+      map: "./img/renova/08/mapA_08.svg",
       venue: "A",
       title: "安全告示牌 — 守護工安的共通語言",
       desciption:
@@ -159,17 +159,17 @@
       number: "09",
       img: [
         {
-          l: "/img/renova/09/0901_1x.jpg",
-          m: "/img/renova/09/0901_2x.jpg",
-          h: "/img/renova/09/0901_3x.jpg"
+          l: "./img/renova/09/0901_1x.jpg",
+          m: "./img/renova/09/0901_2x.jpg",
+          h: "./img/renova/09/0901_3x.jpg"
         },
         {
-          l: "/img/renova/09/0902_1x.jpg",
-          m: "/img/renova/09/0902_2x.jpg",
-          h: "/img/renova/09/0902_3x.jpg"
+          l: "./img/renova/09/0902_1x.jpg",
+          m: "./img/renova/09/0902_2x.jpg",
+          h: "./img/renova/09/0902_3x.jpg"
         }
       ],
-      map: "/img/renova/09/mapA_09.svg",
+      map: "./img/renova/09/mapA_09.svg",
       venue: "A",
       title: "向高鐵幕後英雄致敬",
       desciption:
@@ -181,18 +181,18 @@
       number: "10",
       img: [
         {
-          l: "/img/era/10/1001_1x.jpg",
-          m: "/img/era/10/1001_2x.jpg",
-          h: "/img/era/10/1001_3x.jpg"
+          l: "./img/era/10/1001_1x.jpg",
+          m: "./img/era/10/1001_2x.jpg",
+          h: "./img/era/10/1001_3x.jpg"
         },
         {
-          l: "/img/era/10/1002_1x.jpg",
-          m: "/img/era/10/1002_2x.jpg",
-          h: "/img/era/10/1002_3x.jpg"
+          l: "./img/era/10/1002_1x.jpg",
+          m: "./img/era/10/1002_2x.jpg",
+          h: "./img/era/10/1002_3x.jpg"
         }
 
       ],
-      map: "/img/era/10/mapA_10.svg",
+      map: "./img/era/10/mapA_10.svg",
       venue: "A",
       title: "700T 的誕生",
       desciption:
@@ -202,23 +202,23 @@
       number: "11",
       img: [
         {
-          l: "/img/era/11/1101_1x.jpg",
-          m: "/img/era/11/1101_2x.jpg",
-          h: "/img/era/11/1101_3x.jpg"
+          l: "./img/era/11/1101_1x.jpg",
+          m: "./img/era/11/1101_2x.jpg",
+          h: "./img/era/11/1101_3x.jpg"
         },
         {
-          l: "/img/era/11/1102_1x.jpg",
-          m: "/img/era/11/1102_2x.jpg",
-          h: "/img/era/11/1102_3x.jpg"
+          l: "./img/era/11/1102_1x.jpg",
+          m: "./img/era/11/1102_2x.jpg",
+          h: "./img/era/11/1102_3x.jpg"
         },
         {
-          l: "/img/era/11/1102_1x.jpg",
-          m: "/img/era/11/1102_2x.jpg",
-          h: "/img/era/11/1102_3x.jpg"
+          l: "./img/era/11/1102_1x.jpg",
+          m: "./img/era/11/1102_2x.jpg",
+          h: "./img/era/11/1102_3x.jpg"
         }
 
       ],
-      map: "/img/era/11/mapA_11.svg",
+      map: "./img/era/11/mapA_11.svg",
       venue: "A",
       title: "一日生活圈",
       desciption:
@@ -228,22 +228,22 @@
       number: "12",
       img: [
         {
-          l: "/img/era/12/1201_1x.jpg",
-          m: "/img/era/12/1201_2x.jpg",
-          h: "/img/era/12/1201_3x.jpg"
+          l: "./img/era/12/1201_1x.jpg",
+          m: "./img/era/12/1201_2x.jpg",
+          h: "./img/era/12/1201_3x.jpg"
         },
         {
-          l: "/img/era/12/1202_1x.jpg",
-          m: "/img/era/12/1202_2x.jpg",
-          h: "/img/era/12/1202_3x.jpg"
+          l: "./img/era/12/1202_1x.jpg",
+          m: "./img/era/12/1202_2x.jpg",
+          h: "./img/era/12/1202_3x.jpg"
         },
         {
-          l: "/img/era/12/1203_1x.jpg",
-          m: "/img/era/12/1203_2x.jpg",
-          h: "/img/era/12/1203_3x.jpg"
+          l: "./img/era/12/1203_1x.jpg",
+          m: "./img/era/12/1203_2x.jpg",
+          h: "./img/era/12/1203_3x.jpg"
         }
       ],
-      map: "/img/era/12/mapA_12.svg",
+      map: "./img/era/12/mapA_12.svg",
       venue: "A",
       title: "700T 上的伸展台",
       desciption:
@@ -253,18 +253,18 @@
       number: "13",
       img: [
         {
-          l: "/img/era/13/1301_1x.jpg",
-          m: "/img/era/13/1301_2x.jpg",
-          h: "/img/era/13/1301_3x.jpg"
+          l: "./img/era/13/1301_1x.jpg",
+          m: "./img/era/13/1301_2x.jpg",
+          h: "./img/era/13/1301_3x.jpg"
         },
         {
-          l: "/img/era/13/1302_1x.jpg",
-          m: "/img/era/13/1302_2x.jpg",
-          h: "/img/era/13/1302_3x.jpg"
+          l: "./img/era/13/1302_1x.jpg",
+          m: "./img/era/13/1302_2x.jpg",
+          h: "./img/era/13/1302_3x.jpg"
         },
 
       ],
-      map: "/img/era/13/mapA_13.svg",
+      map: "./img/era/13/mapA_13.svg",
       venue: "A",
       title: "700T 駕駛艙",
       desciption:
@@ -274,12 +274,12 @@
       number: "14",
       img: [
         {
-          l: "/img/era/14/1401_1x.jpg",
-          m: "/img/era/14/1401_2x.jpg",
-          h: "/img/era/14/1401_3x.jpg"
+          l: "./img/era/14/1401_1x.jpg",
+          m: "./img/era/14/1401_2x.jpg",
+          h: "./img/era/14/1401_3x.jpg"
         }
       ],
-      map: "/img/era/14/mapA_14.svg",
+      map: "./img/era/14/mapA_14.svg",
       venue: "A",
       title: "高鐵聲光電",
       desciption:
@@ -289,17 +289,17 @@
       number: "15",
       img: [
         {
-          l: "/img/era/15/1501_1x.jpg",
-          m: "/img/era/15/1501_2x.jpg",
-          h: "/img/era/15/1501_3x.jpg"
+          l: "./img/era/15/1501_1x.jpg",
+          m: "./img/era/15/1501_2x.jpg",
+          h: "./img/era/15/1501_3x.jpg"
         },
         {
-          l: "/img/era/15/1502_1x.jpg",
-          m: "/img/era/15/1502_2x.jpg",
-          h: "/img/era/15/1502_3x.jpg"
+          l: "./img/era/15/1502_1x.jpg",
+          m: "./img/era/15/1502_2x.jpg",
+          h: "./img/era/15/1502_3x.jpg"
         }
       ],
-      map: "/img/era/15/mapA_15.svg",
+      map: "./img/era/15/mapA_15.svg",
       venue: "A",
       title: "智慧化旅客服務",
       desciption:
@@ -311,18 +311,18 @@
       number: "16",
       img: [
         {
-          l: "/img/repair/16/1601_1x.jpg",
-          m: "/img/repair/16/1601_2x.jpg",
-          h: "/img/repair/16/1601_3x.jpg"
+          l: "./img/repair/16/1601_1x.jpg",
+          m: "./img/repair/16/1601_2x.jpg",
+          h: "./img/repair/16/1601_3x.jpg"
         },
         {
-          l: "/img/repair/16/1602_1x.jpg",
-          m: "/img/repair/16/1602_2x.jpg",
-          h: "/img/repair/16/1602_3x.jpg"
+          l: "./img/repair/16/1602_1x.jpg",
+          m: "./img/repair/16/1602_2x.jpg",
+          h: "./img/repair/16/1602_3x.jpg"
         },
 
       ],
-      map: "/img/repair/16/mapB_16.svg",
+      map: "./img/repair/16/mapB_16.svg",
       venue: "B",
       title: "轉向架清洗機",
       desciption:
@@ -332,13 +332,13 @@
       number: "17",
       img: [
         {
-          l: "/img/repair/17/1701_1x.jpg",
-          m: "/img/repair/17/1701_2x.jpg",
-          h: "/img/repair/17/1701_3x.jpg"
+          l: "./img/repair/17/1701_1x.jpg",
+          m: "./img/repair/17/1701_2x.jpg",
+          h: "./img/repair/17/1701_3x.jpg"
         },
 
       ],
-      map: "/img/repair/17/mapB_17.svg",
+      map: "./img/repair/17/mapB_17.svg",
       venue: "B",
       title: "安全是回家唯一的路",
       desciption:
@@ -348,12 +348,12 @@
       number: "18",
       img: [
         {
-          l: "/img/repair/18/1801_1x.jpg",
-          m: "/img/repair/18/1801_2x.jpg",
-          h: "/img/repair/18/1801_3x.jpg"
+          l: "./img/repair/18/1801_1x.jpg",
+          m: "./img/repair/18/1801_2x.jpg",
+          h: "./img/repair/18/1801_3x.jpg"
         }
       ],
-      map: "/img/repair/18/mapB_18.svg",
+      map: "./img/repair/18/mapB_18.svg",
       venue: "B",
       title: "高鐵星光英雄",
       desciption:
@@ -363,12 +363,12 @@
       number: "19",
       img: [
         {
-          l: "/img/repair/19/1901_1x.jpg",
-          m: "/img/repair/19/1901_2x.jpg",
-          h: "/img/repair/19/1901_3x.jpg"
+          l: "./img/repair/19/1901_1x.jpg",
+          m: "./img/repair/19/1901_2x.jpg",
+          h: "./img/repair/19/1901_3x.jpg"
         }
       ],
-      map: "/img/repair/19/mapB_19.svg",
+      map: "./img/repair/19/mapB_19.svg",
       venue: "B",
       title: "解讀 700T 維修",
       desciption:
@@ -378,12 +378,12 @@
       number: "20",
       img: [
         {
-          l: "/img/repair/20/2001_1x.jpg",
-          m: "/img/repair/20/2001_2x.jpg",
-          h: "/img/repair/20/2001_3x.jpg"
+          l: "./img/repair/20/2001_1x.jpg",
+          m: "./img/repair/20/2001_2x.jpg",
+          h: "./img/repair/20/2001_3x.jpg"
         }
       ],
-      map: "/img/repair/20/mapB_20.svg",
+      map: "./img/repair/20/mapB_20.svg",
       venue: "B",
       title: "高鐵列車維修及清洗作業",
       desciption:
@@ -395,27 +395,27 @@
       number: "21",
       img: [
         {
-          l: "/img/glory/21/2101_1x.jpg",
-          m: "/img/glory/21/2101_2x.jpg",
-          h: "/img/glory/21/2101_3x.jpg"
+          l: "./img/glory/21/2101_1x.jpg",
+          m: "./img/glory/21/2101_2x.jpg",
+          h: "./img/glory/21/2101_3x.jpg"
         },
         {
-          l: "/img/glory/21/2102_1x.jpg",
-          m: "/img/glory/21/2102_2x.jpg",
-          h: "/img/glory/21/2102_3x.jpg"
+          l: "./img/glory/21/2102_1x.jpg",
+          m: "./img/glory/21/2102_2x.jpg",
+          h: "./img/glory/21/2102_3x.jpg"
         },
         {
-          l: "/img/glory/21/2103_1x.jpg",
-          m: "/img/glory/21/2103_2x.jpg",
-          h: "/img/glory/21/2103_3x.jpg"
+          l: "./img/glory/21/2103_1x.jpg",
+          m: "./img/glory/21/2103_2x.jpg",
+          h: "./img/glory/21/2103_3x.jpg"
         },
         {
-          l: "/img/glory/21/2104_1x.jpg",
-          m: "/img/glory/21/2104_2x.jpg",
-          h: "/img/glory/21/2104_3x.jpg"
+          l: "./img/glory/21/2104_1x.jpg",
+          m: "./img/glory/21/2104_2x.jpg",
+          h: "./img/glory/21/2104_3x.jpg"
         }
       ],
-      map: "/img/glory/21/mapB_21.svg",
+      map: "./img/glory/21/mapB_21.svg",
       venue: "B",
       title: "大火車微觀園",
       desciption:
@@ -425,12 +425,12 @@
       number: "22",
       img: [
         {
-          l: "/img/glory/22/2201_1x.jpg",
-          m: "/img/glory/22/2201_2x.jpg",
-          h: "/img/glory/22/2201_3x.jpg"
+          l: "./img/glory/22/2201_1x.jpg",
+          m: "./img/glory/22/2201_2x.jpg",
+          h: "./img/glory/22/2201_3x.jpg"
         }
       ],
-      map: "/img/glory/22/mapB_22.svg",
+      map: "./img/glory/22/mapB_22.svg",
       venue: "B",
       title: "世界高鐵",
       desciption:
@@ -440,17 +440,17 @@
       number: "23",
       img: [
         {
-          l: "/img/glory/23/2301_1x.jpg",
-          m: "/img/glory/23/2301_2x.jpg",
-          h: "/img/glory/23/2301_3x.jpg"
+          l: "./img/glory/23/2301_1x.jpg",
+          m: "./img/glory/23/2301_2x.jpg",
+          h: "./img/glory/23/2301_3x.jpg"
         },
         {
-          l: "/img/glory/23/2302_1x.jpg",
-          m: "/img/glory/23/2302_2x.jpg",
-          h: "/img/glory/23/2302_3x.jpg"
+          l: "./img/glory/23/2302_1x.jpg",
+          m: "./img/glory/23/2302_2x.jpg",
+          h: "./img/glory/23/2302_3x.jpg"
         }
       ],
-      map: "/img/glory/23/mapB_23.svg",
+      map: "./img/glory/23/mapB_23.svg",
       venue: "A",
       title: "高速傳愛與榮耀",
       desciption:
@@ -460,17 +460,17 @@
       number: "24",
       img: [
         {
-          l: "/img/glory/24/2401_1x.jpg",
-          m: "/img/glory/24/2401_2x.jpg",
-          h: "/img/glory/24/2401_3x.jpg"
+          l: "./img/glory/24/2401_1x.jpg",
+          m: "./img/glory/24/2401_2x.jpg",
+          h: "./img/glory/24/2401_3x.jpg"
         },
         {
-          l: "/img/glory/24/2402_1x.jpg",
-          m: "/img/glory/24/2402_2x.jpg",
-          h: "/img/glory/24/2402_3x.jpg"
+          l: "./img/glory/24/2402_1x.jpg",
+          m: "./img/glory/24/2402_2x.jpg",
+          h: "./img/glory/24/2402_3x.jpg"
         }
       ],
-      map: "/img/glory/24/mapB_24.svg",
+      map: "./img/glory/24/mapB_24.svg",
       venue: "B",
       title: "速度與文化的連結",
       desciption:
@@ -480,22 +480,22 @@
       number: "25",
       img: [
         {
-          l: "/img/glory/25/2501_1x.jpg",
-          m: "/img/glory/25/2501_2x.jpg",
-          h: "/img/glory/25/2501_3x.jpg"
+          l: "./img/glory/25/2501_1x.jpg",
+          m: "./img/glory/25/2501_2x.jpg",
+          h: "./img/glory/25/2501_3x.jpg"
         },
         {
-          l: "/img/glory/25/2502_1x.jpg",
-          m: "/img/glory/25/2502_2x.jpg",
-          h: "/img/glory/25/2502_3x.jpg"
+          l: "./img/glory/25/2502_1x.jpg",
+          m: "./img/glory/25/2502_2x.jpg",
+          h: "./img/glory/25/2502_3x.jpg"
         },
         {
-          l: "/img/glory/25/2503_1x.jpg",
-          m: "/img/glory/25/2503_2x.jpg",
-          h: "/img/glory/25/2503_3x.jpg"
+          l: "./img/glory/25/2503_1x.jpg",
+          m: "./img/glory/25/2503_2x.jpg",
+          h: "./img/glory/25/2503_3x.jpg"
         }
       ],
-      map: "/img/glory/25/mapB_25.svg",
+      map: "./img/glory/25/mapB_25.svg",
       venue: "B",
       title: "願景 ‧ 未來",
       desciption:
