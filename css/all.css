@@ -4496,6 +4496,9 @@ input[type="button"].btn-block {
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
+.fade:not(.show) {
+  opacity: 0;
+}
 
 .opacity-1 {
   opacity: 1 !important;
@@ -4764,7 +4767,9 @@ input[type="button"].btn-block {
 
   border-radius: 0 !important;
 }
-
+#orian-tab .nav-link.active {
+  border-bottom: 0px solid var(--greyish-brown-three) !important;
+}
 .orian-btline {
   color: #4e453e;
   background-color: none;
@@ -4773,7 +4778,7 @@ input[type="button"].btn-block {
 
 
   display: block !important;
-  border-bottom: none !important;
+  border-bottom: 6px solid var(--greyish-brown-three);
 
 
   border-radius: 0 !important;
@@ -17805,7 +17810,7 @@ footer.footer {
 
 }
 .text-yellow {
-  font-weight: 500;
-  color: var(--light-mustard);
-  border-bottom: 3px solid var(--light-mustard);
+  font-weight: 500 !important;
+  color: var(--light-mustard) !important;
+  border-bottom: 3px solid var(--light-mustard) !important;
 }
