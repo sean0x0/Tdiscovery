@@ -596,7 +596,7 @@
       <figure class="">
         <img src="${value.map}"
           class=""
-          alt="${value.venue}館地圖">
+          alt="展區${value.number}位置">
   
         
       </figure>
@@ -695,7 +695,8 @@
   });
 
    //修正花魁車次選單底線樣式
-    if ($("#orian-tab a.nav-link").hasClass("active")) {
+   $(window).on("click", function (event) { //修正花魁車次選單底線樣式
+    if ($("#orian-tab > a.nav-link").hasClass("active")) {
       $("#orian-tab > a.nav-link").addClass("orian-btline");
       $("#orian-tab").css(
         "border-bottom",
@@ -709,6 +710,10 @@
         "0px solid var(--greyish-brown-three)"
       );
       $("#orian-tab").addClass("brown-underline");
+      $("#orian-tab > a.nav-link").removeClass("orian-btline");
     }
+  });
+
+
   
 };
