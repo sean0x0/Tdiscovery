@@ -1,8 +1,8 @@
 ﻿window.onload = function () {
-  const windowTop = $(window).scrollTop();
-  $(".list-bullet ul li").removeClass("hollow");
-  $(".map section").removeClass("read"); 
-  $("body, html").animate({ scrollTop: windowTop }, 1000);
+  const windowTop = $(window).scrollTop(); 
+  //$(".list-bullet ul li").removeClass("hollow");
+  //$(".map section").removeClass("read"); 
+  $("body, html").animate({ scrollTop: windowTop }, 1000); //頁面跳回頂部
 
   //線上探索分類
 
