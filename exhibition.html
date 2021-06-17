@@ -17,7 +17,7 @@
         header {
             min-height: 60vh;
             background-image: url(img/exhibition_bg.jpg);
-            background-size: 120%;
+            background-size: 100%;
             background-position: center center;
             position: relative;
             /*opacity: 0.6;*/
@@ -1041,7 +1041,7 @@
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             $(".zoom").css({
-                backgroundSize: (120 + scroll / 15) + "%",
+                backgroundSize: (100 + scroll / 15) + "%",
                 top: -(scroll / 10) + "%",
             });
         });
@@ -1106,9 +1106,9 @@
 
         $('#subNav a').click(function (e) {
             $(this).tab('show');
-            var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+            
             window.location.hash = this.hash;
-            $('html,body').scrollTop(scrollmem);
+            
 
         });
 
