@@ -1,5 +1,8 @@
 ﻿window.onload = function () {
-
+  const windowTop = $(window).scrollTop();
+  $(".list-bullet ul li").removeClass("hollow");
+  $(".map section").removeClass("read"); 
+  $("body, html").animate({ scrollTop: windowTop }, 1000);
 
   //線上探索分類
 
@@ -633,14 +636,15 @@
 
    
         const windowTop = $(window).scrollTop();
+        const navHeight = $("#nav").height() - 50;
 
-        const topItem = $(
-          `.area-${1 + indexArea} .list-sec${index + 1}`
-        ).position().top;
+        const top =
+          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
+          navHeight - 5;
 
         const bottomItem = $(bulletLast).position().top;
 
-        if (windowTop >= topItem) {
+        if (windowTop >= top) {
           $(bulletPre).removeClass("hollow");
           $(mapPre).removeClass("read");
           $(bulletNext).removeClass("hollow");
@@ -673,19 +677,18 @@
       
 
       bulletThis.on("click", function () { //左邊展區小圓圈連結 點擊滑動到該展區頂部
-
-        const navHeight = $("#nav").height() + 50;
-        const imageHeight = $("body, html").height() * 0.45;
-        const headerHeight = navHeight + imageHeight;
+        
+        const navHeight = $("#nav").height() - 50; //
         const top =
-          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top +
-          headerHeight;
-  
+          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
+          navHeight;
 
         $("body, html").animate({ scrollTop: top }, 1000);
       });
     });
   };
+
+  
 
   areaAll.forEach((value, indexArea) => {
     rightBox(indexArea);
