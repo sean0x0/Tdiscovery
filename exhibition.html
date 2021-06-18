@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>台灣高鐵探索館</title>
-    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
     <meta name="description"
         content="台灣高鐵探索館是台灣第一，也是唯一的高速鐵路企業形象博物館，以鐵道文化為資源，撰繪出交通科技教育的藍本並以保存鐵道文化資產為核心價值。歡迎所有大小朋友們，預約來趟經典的「台灣高鐵歷史之旅」。" />
     <meta name="keywords" content="博物館，探索，桃園，高鐵，體驗，模型，列車，室內景點，參觀，免門票，預約，青埔" />
@@ -17,7 +17,7 @@
         header {
             min-height: 60vh;
             background-image: url(img/exhibition_bg.jpg);
-            background-size: 100%;
+            background-size: 120%;
             background-position: center center;
             position: relative;
             /*opacity: 0.6;*/
@@ -38,11 +38,11 @@
             padding-bottom: 0;
 
         }
-        @media only screen and (max-width: 767.98px) {
+        @media only screen and (max-width: 575.98px) {
             header {
             min-height: 60vh;
             background-image: url(img/exhibition_bg_m.jpg);
-            background-size: cover;
+            background-size: cover !important;
             background-position: center center;
             position: relative;
             /*opacity: 0.6;*/
@@ -1041,7 +1041,7 @@
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             $(".zoom").css({
-                backgroundSize: (100 + scroll / 15) + "%",
+                backgroundSize: (120 + scroll / 15) + "%",
                 top: -(scroll / 10) + "%",
             });
         });
