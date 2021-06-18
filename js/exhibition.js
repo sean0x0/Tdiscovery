@@ -636,11 +636,11 @@
 
    
         const windowTop = $(window).scrollTop();
-        const navHeight = $("#nav").height() - 50;
+        const navHeight = $("#nav").height() + 50;
 
         const top =
           $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
-          navHeight - 5;
+          navHeight - 1;
 
         const bottomItem = $(bulletLast).position().top;
 
@@ -678,7 +678,7 @@
 
       bulletThis.on("click", function () { //左邊展區小圓圈連結 點擊滑動到該展區頂部
         
-        const navHeight = $("#nav").height() - 50; //
+        const navHeight = $("#nav").height() + 50; //
         const top =
           $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
           navHeight;
