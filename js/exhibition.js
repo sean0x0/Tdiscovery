@@ -1,12 +1,12 @@
 ﻿window.onload = function () {
   const windowTop = $(window).scrollTop();
-  //$(".list-bullet ul li").removeClass("hollow");
-  //$(".map section").removeClass("read"); 
-  //$("body, html").animate({ scrollTop: windowTop }, 1000); //頁面跳回頂部
+  $(".list-bullet ul li").removeClass("hollow");
+  $(".map section").removeClass("read"); 
+  $("body, html").animate({ scrollTop: windowTop }, 1000); //頁面跳回頂部
 
-  const bulletLast = $(".list-bullet li").siblings();
+  //const bulletLast = $(".list-bullet li").siblings();
 
-  $(bulletLast).removeClass("hollow");
+  //$(bulletLast).removeClass("hollow");
 
   /*const tabRepair = $(".norian:nth-child(5)");
   const itemGlory = $(".norian:nth-child(6) a").hasClass("active") ;
