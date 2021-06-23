@@ -1,8 +1,37 @@
 ﻿window.onload = function () {
-  const windowTop = $(window).scrollTop(); 
+  const windowTop = $(window).scrollTop();
   //$(".list-bullet ul li").removeClass("hollow");
   //$(".map section").removeClass("read"); 
-  $("body, html").animate({ scrollTop: windowTop }, 1000); //頁面跳回頂部
+  //$("body, html").animate({ scrollTop: windowTop }, 1000); //頁面跳回頂部
+
+  const bulletLast = $(".list-bullet li").siblings();
+
+  $(bulletLast).removeClass("hollow");
+
+  /*const tabRepair = $(".norian:nth-child(5)");
+  const itemGlory = $(".norian:nth-child(6) a").hasClass("active") ;
+  const itemRoom = $(".norian:nth-child(7) a").hasClass("active");
+
+  if(itemGlory || itemRoom){
+    $("#subNav").removeClass("justify-content-start");
+    $("#subNav").addClass("justify-content-end");
+  }else{
+    $("#subNav").removeClass("justify-content-end");
+    $("#subNav").addClass("justify-content-start");
+  }*/
+
+  //修正花魁車次選單底線樣式
+  if ($("#orianTab > a").hasClass("active")) {
+    $("#orianTab").addClass("orian-btline");
+    
+    $("#orian-tab").css("border","0");
+    $("#orianTab").removeClass("brown-underline");
+  } else {
+    $("#orianTab").removeClass("orian-btline");
+    
+    $("#orianTab").addClass("brown-underline");
+    $("#orianTab").removeClass("orian-btline");
+  }
 
   //線上探索分類
 
@@ -411,11 +440,6 @@
           l: "./img/glory/21/2103_1x.jpg",
           m: "./img/glory/21/2103_2x.jpg",
           h: "./img/glory/21/2103_3x.jpg"
-        },
-        {
-          l: "./img/glory/21/2104_1x.jpg",
-          m: "./img/glory/21/2104_2x.jpg",
-          h: "./img/glory/21/2104_3x.jpg"
         }
       ],
       map: "./img/glory/21/mapB_21.svg",
@@ -612,11 +636,11 @@
 
 
   const bulletMap = (indexArea) => {//小圓圈和地圖連動效果
-    
+
 
     areaAll[indexArea].forEach((value, index) => {
       const bulletThis = $(`.area-${1 + indexArea} .bullet${index + 1}`);
-      
+
 
       $("#subNav a").on("click", function (event) {
         $(".list-bullet ul li").removeClass("hollow");
@@ -634,32 +658,34 @@
         const mapNext = $(`.area-${1 + indexArea} .map-sec${index + 2}`);
         const mapLast = $(`.area-${1 + indexArea} .map section`).last();
 
-   
+
         const windowTop = $(window).scrollTop();
-        const navHeight = $("#nav").height() + 50;
+        const navHeight = $("#nav").height() + 100;
 
         const top =
-          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
-          navHeight - 1;
+          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top - navHeight - 1;
+        const topItem = $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top;
 
         const bottomItem = $(bulletLast).position().top;
 
         if (windowTop >= top) {
-          $(bulletPre).removeClass("hollow");
-          $(mapPre).removeClass("read");
           $(bulletNext).removeClass("hollow");
-
           $(mapNext).removeClass("read");
+          $(bulletPre).removeClass("hollow");
+
+          $(mapPre).removeClass("read");
           $(bulletThis).addClass("hollow");
           $(mapThis).addClass("read");
         }
+
+        
 
         let bulletList = $(".list-bullet");
         let mapList = $(".map");
         var y = $(window).scrollTop();
         var mainTop = $("main").position().top;
 
-        if (y > mainTop - 150) {
+        if (windowTop > mainTop - 150) {
           $(bulletList).addClass("show");
 
           $(mapList).addClass("show");
@@ -674,11 +700,11 @@
         }
       });
 
-      
+
 
       bulletThis.on("click", function () { //左邊展區小圓圈連結 點擊滑動到該展區頂部
-        
-        const navHeight = $("#nav").height() + 50; //
+
+        const navHeight = $("#nav").height() + 100; //
         const top =
           $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
           navHeight;
@@ -688,7 +714,7 @@
     });
   };
 
-  
+
 
   areaAll.forEach((value, indexArea) => {
     rightBox(indexArea);
@@ -697,26 +723,29 @@
     bulletMap(indexArea);
   });
 
-   //修正花魁車次選單底線樣式
-   $(window).on("click", function (event) { //修正花魁車次選單底線樣式
-    if ($("#orian-tab > a.nav-link").hasClass("active")) {
-      $("#orian-tab > a.nav-link").addClass("orian-btline");
-      $("#orian-tab").css(
+
+
+  
+  $(window).on("click", function (event) { 
+    if ($("#orianTab > a.nav-link").hasClass("active")) {
+      $("#orianTab").addClass("orian-btline");
+      $("#orianTab").css(
         "border-bottom",
         "6px solid var(--greyish-brown-three)"
       );
 
-      $("#orian-tab").removeClass("brown-underline");
+      $("#orianTab").removeClass("brown-underline");
+      $(".nav-pills .nav-link.active").css("border-bottom","0px !immportant")
     } else {
-      $("#orian-tab").css(
+      $("#orianTab").css(
         "border-bottom",
         "0px solid var(--greyish-brown-three)"
       );
-      $("#orian-tab").addClass("brown-underline");
-      $("#orian-tab > a.nav-link").removeClass("orian-btline");
+      $("#orianTab").addClass("brown-underline");
+      $("#orianTab > a.nav-link").removeClass("orian-btline");
     }
   });
 
 
-  
+
 };
