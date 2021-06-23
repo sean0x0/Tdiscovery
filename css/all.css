@@ -4768,9 +4768,11 @@ input[type="button"].btn-block {
 
   border-radius: 0 !important;
 }
+
 #orianTab .nav-link.active {
   border-bottom: 0px solid var(--greyish-brown-three) !important;
 }
+
 .orian-btline {
   color: #4e453e;
   background-color: none;
@@ -4783,6 +4785,28 @@ input[type="button"].btn-block {
 
 
   border-radius: 0 !important;
+}
+
+#orian-lang a:hover {
+  font-weight: 500 !important;
+  color: var(--light-mustard) !important;
+  border-bottom: 3px solid var(--light-mustard) !important;
+}
+
+#orian-lang a {
+  color: var(--gray);
+
+}
+#orian-lang .nav-link.active {
+  font-weight: 500 !important;
+  color: var(--light-mustard) !important;
+  border-bottom: 3px solid var(--light-mustard) !important;
+}
+#orian-lang .nav-link:hover {
+  font-weight: 500 !important;
+  color: var(--light-mustard) !important;
+  border-bottom: 3px solid var(--light-mustard) !important;
+  border-radius: 0;
 }
 
 .nav-fill>.nav-link,
@@ -17840,18 +17864,3 @@ header::before {
 }
 
 /* --------------- 線上探索 語言------------------ */
-#orian-lang a:hover {
-  font-weight: 500 !important;
-  color: var(--light-mustard) !important;
-  border-bottom: 3px solid var(--light-mustard) !important;
-}
-
-#orian-lang a {
-  color: var(--gray);
-
-}
-.text-yellow {
-  font-weight: 500 !important;
-  color: var(--light-mustard) !important;
-  border-bottom: 3px solid var(--light-mustard) !important;
-}
