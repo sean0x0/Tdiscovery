@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>台灣高鐵探索館</title>
     <meta name="description"
         content="台灣高鐵探索館是台灣第一，也是唯一的高速鐵路企業形象博物館，以鐵道文化為資源，撰繪出交通科技教育的藍本並以保存鐵道文化資產為核心價值。歡迎所有大小朋友們，預約來趟經典的「台灣高鐵歷史之旅」。" />
@@ -12,48 +12,23 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
     <style>
         header {
-            min-height: 60vh;
             background-image: url(img/exhibition_bg.jpg);
-            background-size: 120%;
-            background-position: center center;
-            position: relative;
-            /*opacity: 0.6;*/
         }
 
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            background-color: rgba(78, 69, 62, 0.4);
-        }
 
-        .zoom {
-            overflow: hidden;
-            padding-bottom: 0;
-
-        }
-        @media only screen and (max-width: 575.98px) {
+        @media only screen and (max-width: 991.98px) {
             header {
-            min-height: 60vh;
-            background-image: url(img/exhibition_bg_m.jpg);
-            background-size: cover !important;
-            background-position: center center;
-            position: relative;
-            /*opacity: 0.6;*/
-        }
-        }
 
+                background-image: url(img/exhibition_bg_m.jpg);
+            }
+        }
     </style>
-    <!--link rel="preload" as="style" href="css/main.css" onload="this.onload=null;this.rel='stylesheet'" /-->
     <link href="css/all.css" rel="stylesheet" />
     <link href="css/hamburger.css" rel="stylesheet" />
     <link href="css/TOC.css" rel="stylesheet">
+    <!--link href="css/scrolling-tabs.css" rel="stylesheet"-->
 
 </head>
 
@@ -76,7 +51,8 @@
 
                     </div>
                     <div id="small-booking" class="z-nav d-lg-none">
-                        <a href="#" class="p-0 btn bg-blackish text-white rounded-circle shadow-heavy" role="button"
+                        <a href="#" data-toggle="modal" data-target="#staticBackdrop"
+                            class="p-0 btn bg-blackish text-white rounded-circle shadow-heavy" role="button"
                             aria-pressed="true"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="22"
                                 fill="currentColor" class="mb-1 mt-2 ml-1 bi bi-calendar4-week text-light-mustard"
                                 viewBox="1 1 16 18">
@@ -97,13 +73,13 @@
                                 <a class="nav-link mx-3 yellow-underline py-3" href="aboutus.html">關於我們</a>
                             </li>
                             <li class="nav-item active pt-lg-3">
-                                <a class="nav-link mx-3 yellow-underline-active pt-3" href="exhibition.html">線上探索<span
+                                <a class="nav-link mx-3 yellow-underline-active py-3 " href="exhibition.html">線上探索<span
                                         class="sr-only">(current)</span></a>
 
                             </li>
                             <li id="nav-booking" class="nav-item ml-4 mx-auto order-lg-last order-first">
                                 <div class="card border-0 ml-lg-4 bg-transparent py-2 py-lg-0">
-                                    <a href="Booking"
+                                    <a href="#" data-toggle="modal" data-target="#staticBackdrop"
                                         class="h6 btn px-4 bg-blackish text-white active rounded-pill my-2 shadow z-nav"
                                         role="button" aria-pressed="true"><svg xmlns="http://www.w3.org/2000/svg"
                                             width="24" height="24" fill="currentColor"
@@ -123,10 +99,35 @@
             </nav>
         </div>
     </div>
-
+    <!--疫情公告 取代預約按鈕視窗-->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="staticBackdropLabel">疫情公告</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    COVID-19(新冠肺炎)疫情升溫，本館自5月15日起停止對外開放。
+                    </br>
+                    台灣高鐵公司將試疫情狀況，於本網站公告重新開放預約參觀時間。
+                    <hr>
+                    <p>詳情請見：<a href="#" class="tooltip-test" title="新冠肺癌防疫措施">台灣高鐵探索館實施新冠肺癌防疫措施</a></p>
+                </div>
+                <!--div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div-->
+            </div>
+        </div>
+    </div>
+    <!--疫情公告 取代預約按鈕視窗-->
     <header class="zoom">
 
-        <div class="position-absolute w-100 text-center text-white pb-2" style="bottom:0;">
+        <div class="position-absolute w-100 text-center text-white pb-4" style="bottom:0;">
 
 
             <h1 class="">線上探索</h1>
@@ -146,7 +147,7 @@
                     class="nav nav-pills justify-content-start justify-content-md-center overflow-auto flex-nowrap text-nowrap container-xl"
                     id="tab" role="tablist">
 
-                    <li id="orian-tab" class="nav-item brown-underline mx-1" role="探索花魁車">
+                    <li id="orianTab" class="nav-item brown-underline mx-1" role="探索花魁車">
 
                         <a onclick="topFunction()" class="nav-link px-2" id="orian-tab" data-toggle="pill" href="#orian"
                             role="tab" aria-controls="orian" aria-selected="false" style="margin-left:-48px;"><span
@@ -181,546 +182,362 @@
 
                 <div class="tab-content text-center" id="tabContent">
 
-                    <div class="tab-pane fade" id="orian" role="tabpanel" aria-labelledby="oiran-tab">
+                    <div class="tab-pane fade" id="orian" role="tabpanel" aria-labelledby="orian-tab">
 
 
 
-                        <div id="orian-lang"
+                        <!--div id="orian-lang"
                             class="font-weight-lighter position-absolute col text-center text-lg-right pt-2 pb-3 pt-lg-5 px-0 pr-lg-5 z-nav">
                             <a class="tablink text-yellow" onclick="openLang(event,'zh')">中文</a>
                             <a class="px-1 tablink" onclick="openLang(event,'en')">ENG</a>
                             <a class="tablink" onclick="openLang(event,'jp')">日本語</a>
-                        </div>
-
-                        <div id="zh" class="lang">
-                            <section class="showcase bg-white">
-                                <!--探索花魁車 頁-->
+                        </div-->
 
 
-                                <div class="d-flex flex-column showcase-text text-left py-5 container-xl mx-auto">
-                                    <!--all content wrapper-->
-
-                                    <div class="row no-gutters">
-                                        <div class="col text-center">
-
-                                            <h2 class="text-greyish-brown-three">台南展區 - 花魁車地景公園</h2>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="row no-gutters">
-                                        <!--heading style-->
-                                        <div class="col-lg-12">
-
-                                            <h3 class="text-greyish-brown-three font-weight-bold">展示台一：展館論述、來台歷程
-                                            </h3>
-
-                                        </div>
-                                    </div>
+                        <section class="showcase bg-white">
+                            <!--探索花魁車 頁-->
 
 
-                                    <div class="row no-gutters text-brownish-grey-two px-4 pt-4">
-                                        <!--content style-->
-                                        <div class=" col-lg-9">
-                                            <p>
-                                                台灣高鐵公司遠在2003年高鐵興建期，即啟動高鐵重要歷史物件的徵集、研究與保存維護，繼而在2017年於桃園高鐵營運大樓正式成立台灣第一座高速鐵道博物館–「台灣高鐵探索館」，致力推展台灣高速鐵道科技與人文歷史教育。在正式接管典藏世界第一代高鐵「0系花魁車」後，高鐵探索館更肩負世界鐵道文化遺產保存、維護與傳承的重要使命。
-                                            </p>
-                                            <p class="pt-2">
-                                                花魁車地景公園建築結構採用三組垂懸木梁，下凹之弧形隱喻高速鐵路的速度感與流線感，也與新幹線0系車輛的曲線相互呼應；三軸線交錯而成的輻射狀結構形塑鐵道「扇形車庫」的意象，展區空間以0出發到無限大的發展元素闡述
-                                                0 系車輛與台灣高鐵的故事。而花魁車地景公園也是台灣高鐵探索館延伸至台南的文物展區，成為台灣高鐵公司首次展示車輛文物的公共空間。
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="col-0 col-lg-3 align-self-center d-lg-flex justify-content-lg-center pt-4 d-none d-lg-block">
-                                            <img data-src="img/orian/orian-1-2.png" class="lazyload w-75"
-                                                alt="花魁車地景公園建築結構">
-                                        </div>
+                            <div class="d-flex flex-column showcase-text text-left py-5 container-xl mx-auto">
+                                <!--all content wrapper-->
 
+                                <div class="row no-gutters">
+                                    <div class="col text-center">
 
-
-                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-1-3.png"
-                                            alt="台灣高鐵花魁車履歷">
-
-
-                                        <div class="col-lg-12 no-gutters">
-                                            <h4 class="pt-4 font-weight-bolder">世界第一代高鐵-「0系」在台灣
-                                            </h4>
-                                            <p class="pt-2">
-                                                「0系」是世界上第一款高速鐵路電車，也是日本新幹線列車的始祖，於2007年8月被列為日本機械遺產，闡揚其卓越機械的成就，帶給人類交通與生活革命性的巨變與貢獻。新幹線0系電車運轉44年後，於2008年正式在世界高速鐵路中退役。
-                                            </p>
-                                            <p class="pt-2">
-                                                這輛世界第一款高鐵「0系」
-                                                (編號21-5035／原編號：21-1032），源自台灣高鐵興建期間，由JR西日本贈予當時獲得高鐵核心機電系統建造合約的日本「臺灣新幹線會社」（TSIEC)，並於2004年渡海來台，在高鐵興建的過程中擔任「限界測量車」任務，俗稱「花魁車」。功成身退後的「0系」花魁車，又由TSIEC承商，轉贈予台灣高鐵公司，2012年移轉台灣高鐵探索館典藏，正式成為高鐵鐵道文化資產，也是世界唯二在日本海外的0系。
-
-                                            </p>
-                                            <p class="pt-2">
-
-                                                0系花魁車，幾經調查研究與修復，最終選址高鐵台南站，坐落「台灣高鐵探索館-花魁車地景公園」，展現「0系」位於高速鐵路鰲頭的創新科技與成就，亦揭示新幹線「0系」在台灣「在地化」的次生面貌及衍生功能，不但在異國重生，也與台灣高鐵交融成為台灣高速鐵道文化歷史的一環。
-                                            </p>
-                                        </div>
+                                        <h2 class="text-greyish-brown-three">台南展區 - 花魁車地景公園</h2>
 
                                     </div>
+                                </div>
 
+                                <div class="row no-gutters">
+                                    <!--heading style-->
+                                    <div class="col-lg-12">
 
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">展示台一：展館論述、來台歷程
+                                        </h3>
 
-
+                                    </div>
                                 </div>
 
 
-
-                            </section>
-                            <section class="showcase">
-                                <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-12">
-
-                                            <h3 class="text-greyish-brown-three font-weight-bold">
-                                                展示台二：「0系花魁車」修復典藏紀實
-                                            </h3>
-
-                                        </div>
+                                <div class="row no-gutters text-brownish-grey-two px-4 pt-4">
+                                    <!--content style-->
+                                    <div class=" col-lg-9">
+                                        <p>
+                                            台灣高鐵公司遠在2003年高鐵興建期，即啟動高鐵重要歷史物件的徵集、研究與保存維護，繼而在2017年於桃園高鐵營運大樓正式成立台灣第一座高速鐵道博物館–「台灣高鐵探索館」，致力推展台灣高速鐵道科技與人文歷史教育。在正式接管典藏世界第一代高鐵「0系花魁車」後，高鐵探索館更肩負世界鐵道文化遺產保存、維護與傳承的重要使命。
+                                        </p>
+                                        <p class="pt-2">
+                                            花魁車地景公園建築結構採用三組垂懸木梁，下凹之弧形隱喻高速鐵路的速度感與流線感，也與新幹線0系車輛的曲線相互呼應；三軸線交錯而成的輻射狀結構形塑鐵道「扇形車庫」的意象，展區空間以0出發到無限大的發展元素闡述
+                                            0 系車輛與台灣高鐵的故事。而花魁車地景公園也是台灣高鐵探索館延伸至台南的文物展區，成為台灣高鐵公司首次展示車輛文物的公共空間。
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-0 col-lg-3 align-self-center d-lg-flex justify-content-lg-center pt-4 d-none d-lg-block">
+                                        <img data-src="img/orian/orian-1-2.png" class="lazyload w-75" alt="花魁車地景公園建築結構">
                                     </div>
 
 
-                                    <div class="row no-gutters text-brownish-grey-two px-4 pt-4">
+
+                                    <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-1-3.png"
+                                        alt="台灣高鐵花魁車履歷">
 
 
-                                        <h4 class="font-weight-bolder">「花魁」之名何來?
+                                    <div class="col-lg-12 no-gutters">
+                                        <h4 class="pt-4 font-weight-bolder">世界第一代高鐵-「0系」在台灣
                                         </h4>
                                         <p class="pt-2">
-                                            「花魁車」也是日本鐵道限界測量車的俗稱。基於測量路線界限和檢測軌道需求，台灣高鐵必須自行在車體外部安裝許多宛如「髮簪」的測量儀器，執行任務時會延伸出車身，外觀宛如江戶時代的花魁會在髮型上插飾繁複髪簪，因此暱稱其為「花魁車」。
+                                            「0系」是世界上第一款高速鐵路電車，也是日本新幹線列車的始祖，於2007年8月被列為日本機械遺產，闡揚其卓越機械的成就，帶給人類交通與生活革命性的巨變與貢獻。新幹線0系電車運轉44年後，於2008年正式在世界高速鐵路中退役。
                                         </p>
-
-
-                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-2-1.png"
-                                            alt="花魁及限界測量車">
-
-
-                                        <h4 class="font-weight-bolder">0系花魁車的DNA</h4>
-
                                         <p class="pt-2">
-                                            「0系花魁車」原是在日本完成告別班次的「0系」(編號21-5035)車頭，為小窗 1000番代車的一員，屬第
-                                            25批次新幹線車輛，由東急車輛製造廠於1978 年 6 月 19
-                                            日產製。根據車內銘板顯示這台車係於平成10年（1998年）於JR西日本的博多總合車輛所改裝成「限界測量車」，2004年7月16日再抵台，協助台灣高鐵的興建，負責檢查高鐵行進範圍空間是否合格，以確保台灣高鐵營運時的高速行駛安全。
-                                        </p>
+                                            這輛世界第一款高鐵「0系」
+                                            (編號21-5035／原編號：21-1032），源自台灣高鐵興建期間，由JR西日本贈予當時獲得高鐵核心機電系統建造合約的日本「臺灣新幹線會社」（TSIEC)，並於2004年渡海來台，在高鐵興建的過程中擔任「限界測量車」任務，俗稱「花魁車」。功成身退後的「0系」花魁車，又由TSIEC承商，轉贈予台灣高鐵公司，2012年移轉台灣高鐵探索館典藏，正式成為高鐵鐵道文化資產，也是世界唯二在日本海外的0系。
 
-                                        <h4 class="pt-4 font-weight-bolder">修工程與紀實
+                                        </p>
+                                        <p class="pt-2">
+
+                                            0系花魁車，幾經調查研究與修復，最終選址高鐵台南站，坐落「台灣高鐵探索館-花魁車地景公園」，展現「0系」位於高速鐵路鰲頭的創新科技與成就，亦揭示新幹線「0系」在台灣「在地化」的次生面貌及衍生功能，不但在異國重生，也與台灣高鐵交融成為台灣高速鐵道文化歷史的一環。
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+
+
+                        </section>
+                        <section class="showcase">
+                            <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-12">
+
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">
+                                            展示台二：「0系花魁車」修復典藏紀實
+                                        </h3>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row no-gutters text-brownish-grey-two px-4 pt-4">
+
+
+                                    <h4 class="font-weight-bolder">「花魁」之名何來?
+                                    </h4>
+                                    <p class="pt-2">
+                                        「花魁車」也是日本鐵道限界測量車的俗稱。基於測量路線界限和檢測軌道需求，台灣高鐵必須自行在車體外部安裝許多宛如「髮簪」的測量儀器，執行任務時會延伸出車身，外觀宛如江戶時代的花魁會在髮型上插飾繁複髪簪，因此暱稱其為「花魁車」。
+                                    </p>
+
+
+                                    <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-2-1.png"
+                                        alt="花魁及限界測量車">
+
+
+                                    <h4 class="font-weight-bolder">0系花魁車的DNA</h4>
+
+                                    <p class="pt-2">
+                                        「0系花魁車」原是在日本完成告別班次的「0系」(編號21-5035)車頭，為小窗 1000番代車的一員，屬第
+                                        25批次新幹線車輛，由東急車輛製造廠於1978 年 6 月 19
+                                        日產製。根據車內銘板顯示這台車係於平成10年（1998年）於JR西日本的博多總合車輛所改裝成「限界測量車」，2004年7月16日再抵台，協助台灣高鐵的興建，負責檢查高鐵行進範圍空間是否合格，以確保台灣高鐵營運時的高速行駛安全。
+                                    </p>
+
+                                    <h4 class="pt-4 font-weight-bolder">修工程與紀實
+                                    </h4>
+                                    <p class="pt-2">
+                                        「0系花魁車」在台以「限界測量車」退役後，便暫存於高鐵新竹六家基地，幾經簡易的修復，仍無法抵抗大自然的破壞，基於保存與傳承這輛深具世界鐵道科技劃時代意義的鐵道文化資產，2018
+                                        年經國立科學工藝博物館、鐵道專家與文保團隊的調查研究，以復原「0系花魁車」2004-2006年間服役時期的外觀與內裝為修復目標，並依循里加憲章(The
+                                        Riga Charter) 精神，制訂「0系花魁車」的修復計畫，並於2019年啟動修復。
+                                    </p>
+
+                                    <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-2-4.png"
+                                        alt="修復前暫存於台灣高鐵新竹六家基地 ">
+
+
+                                    <p class="pt-2">
+                                        「0系花魁車」的修復工程涵蓋：車體外觀修整、塗料復原、標誌復原、玻璃窗除垢拋光、車頭燈除垢拋光、下方踏板與排障器復原。
+                                        整台車輛經過清潔、去漆、除鏽等多重工序後，再將車頂鈑、裙擺、鼻頭檢修蓋、門板、門框、車頂觀測窗等等部件一一卸下，徹底檢視鏽蝕及變形情況。車體及各部件鏽穿腐爛的部份，切除後採取精密修補或新製鈑件銜接，以繁複手法確保外觀平整。車內部分也精心整理，例如駕駛室控制面板重製、駕駛座椅整修，甚至連滅火器扣帶也進行修復。
+                                        最終的車體噴漆，採用了0系電車「青20號、奶油色10號」經典配色，並比照汽車美容等級來施作；車身上的數字及標記，均以原始字型及圖案噴漆或復刻。「0系花魁車」於2019年12月完成修復作業，總共歷時兩年，成為鐵道文化資產車輛維護與保存的典範。
+                                    </p>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </section>
+                        <section class="showcase bg-white">
+                            <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
+                                <!--all content wrapper-->
+
+                                <div class="row no-gutters">
+                                    <!--heading style-->
+                                    <div class="col-lg-12">
+
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">展示台三：新幹線0系介紹
+                                        </h3>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row no-gutters text-brownish-grey-two px-4">
+                                    <!--content style-->
+                                    <div class=" col-lg-9">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            世界高速鐵路先驅的傳奇-新幹線「0系」
                                         </h4>
                                         <p class="pt-2">
-                                            「0系花魁車」在台以「限界測量車」退役後，便暫存於高鐵新竹六家基地，幾經簡易的修復，仍無法抵抗大自然的破壞，基於保存與傳承這輛深具世界鐵道科技劃時代意義的鐵道文化資產，2018
-                                            年經國立科學工藝博物館、鐵道專家與文保團隊的調查研究，以復原「0系花魁車」2004-2006年間服役時期的外觀與內裝為修復目標，並依循里加憲章(The
-                                            Riga Charter) 精神，制訂「0系花魁車」的修復計畫，並於2019年啟動修復。
+                                            「0系」是集日本鐵道技術之大成，
+                                            1964年10月1日東京奧運會舉辦前夕，這項凝聚日本鐵路人心血的高速鐵路科技正式通車，將東京到大阪從過去的七小時，大幅縮短成為四小時，並在營運的第二年達到了令世人艷羨的210公里時速。
                                         </p>
-
-                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-2-4.png"
-                                            alt="修復前暫存於台灣高鐵新竹六家基地 ">
-
-
                                         <p class="pt-2">
-                                            「0系花魁車」的修復工程涵蓋：車體外觀修整、塗料復原、標誌復原、玻璃窗除垢拋光、車頭燈除垢拋光、下方踏板與排障器復原。
-                                            整台車輛經過清潔、去漆、除鏽等多重工序後，再將車頂鈑、裙擺、鼻頭檢修蓋、門板、門框、車頂觀測窗等等部件一一卸下，徹底檢視鏽蝕及變形情況。車體及各部件鏽穿腐爛的部份，切除後採取精密修補或新製鈑件銜接，以繁複手法確保外觀平整。車內部分也精心整理，例如駕駛室控制面板重製、駕駛座椅整修，甚至連滅火器扣帶也進行修復。
-                                            最終的車體噴漆，採用了0系電車「青20號、奶油色10號」經典配色，並比照汽車美容等級來施作；車身上的數字及標記，均以原始字型及圖案噴漆或復刻。「0系花魁車」於2019年12月完成修復作業，總共歷時兩年，成為鐵道文化資產車輛維護與保存的典範。
+                                            「0系」新幹線電車在日本鐵道上奔馳了44個年頭之久，且未曾發生任何傷亡事故，寫下「安全神話」的「0系」於2008年功成身退。因新幹線「0系」成功的鐵道科技，也啟發了全球各地高速鐵路的研發，促使法國的TGV（1981年）和德國的ICE（1991年）相繼問世。新幹線「0系」開啟世界高速鐵路新紀元，以創新的科技，重新定義人類的生活與產經模式。
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="col-0 col-lg-3 align-self-center d-lg-flex justify-content-lg-center pt-4 d-none d-lg-block">
+                                        <img data-src="img/orian/orian-3-1.png" class="lazyload w-75"
+                                            alt="世界第一條高速鐵路 東海新幹線">
+                                    </div>
+
+
+
+
+                                    <div class="col-lg-12">
+                                        <h4 class="pt-4 font-weight-bolder">新幹線「0系」之命名
+                                        </h4>
+                                        <p class="pt-2">
+                                            新幹線（新幹線／しんかんせん／Shinkansen）是日本的高速鐵路系統，採用標準軌（1435mm）之軌距，之所以稱做「新幹線」，是因為它是全新的幹線，與既有的「在來線」不相同。日本《全國新幹線鐵道整備法》中，將新幹線定義為「列車在主要區間能夠以每小時200公里以上的高速度行駛之幹線鐵路」。
+                                            「0系」初期只被稱為「新幹線電車」，而官方內部名稱是「000系」，並未對外公布。一直到東北、上越新幹線的200系投入服務後，才開始被稱為「0系」。
+
+                                        </p>
+                                        <h4 class="pt-4 font-weight-bolder">新幹線「0系」設計
+                                        </h4>
+                                        <p class="pt-2">
+
+                                            1950年代末期，隨著日本在二戰後，百業待興，其中以東京都區部和大阪市最為迫切高速交通。東海道新幹線建設之初的國鐵總裁十河信二任命國鐵總工程師島秀雄擔任列車的設計總指揮。
+                                        </p>
+
+                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-3-5.jpg"
+                                            alt="象徵時代流行文化的0系車體塗裝">
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                        </section>
+                        <section class="showcase">
+                            <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
+                                <!--all content wrapper-->
+
+                                <div class="row no-gutters">
+                                    <!--heading style-->
+                                    <div class="col-lg-12">
+
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">展示台四：花魁車剖面模型
+                                        </h3>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row no-gutters text-brownish-grey-two px-4">
+                                    <!--content style-->
+                                    <div class="">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            花魁車剖析及限界測量工作
+                                        </h4>
+                                        <p class="pt-2">
+                                            台灣高鐵設計階段中，路線上各橫斷面，尤其月台、隧道、橋涵等處所保留的淨空範圍，均須符合建築界限規範。完工後亦須以各種測量手段來確認，這時就需要「限界測量車」登場了。
+                                        </p>
+                                        <p class="pt-2">
+                                            「0系花魁車」主要是擔任限界測量任務，負責高鐵興建期間檢視車站結構、月台設施、橋梁隧道等結構是否超出建築界限，而侵入鐵道路線淨空範圍內，方能確保高鐵未來行駛安全。
+                                        </p>
+                                        <p class="pt-2">
+                                            為了測試沿線的淨空是否合格，在日本九州博多總合車輛所改裝這輛0系，除了拆除客室內部分座椅，加裝測量儀器，還在車頂改裝了觀測小窗，供工程人員探頭監視之用。而在車外，則有探針及超音波探測器，環繞車身兩側，能在前進時偵測車身與建築之距離，以及是否與碰觸到任何障礙物。由於這輛「0系花魁車」來台後已無動力，不能自力行駛，必須由同樣來自日本的DD14型柴液機車推進，方能執行任務。
+                                        </p>
+                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-4-1.jpg"
+                                            alt="花魁車於2004年擔任限界測量任務 ">
+                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-4-2.jpg"
+                                            alt="執行限界測量圖示說明">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="showcase bg-white">
+                            <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
+                                <!--all content wrapper-->
+
+                                <div class="row no-gutters">
+                                    <!--heading style-->
+                                    <div class="col-lg-12">
+
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">展示台五：軌道路床介紹
+                                        </h3>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row no-gutters text-brownish-grey-two px-4">
+                                    <!--content style-->
+                                    <div class="">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            軌道路床形式
+                                        </h4>
+                                        <p class="pt-2">
+                                            台灣高鐵為了因應沿線地質條件以及提供最安全與最高品質的乘坐效果，在軌道路床的設計概念分為低振動軌道(LVT)、日本版式軌道(J-SLAB)、德國式軌道版(Rheda)、道碴軌道(Ballast
+                                            Track)以及只出現在台北站的嵌入式軌道 (Embedded Rail System)。
+                                            (LVT)、日本版式軌道(J-SLAB)、德國式軌道版(Rheda)、道碴軌道(Ballast
+                                            Track)以及只出現在台北站的嵌入式軌道
+                                            (Embedded Rail System)。
                                         </p>
 
                                     </div>
-
-
-
-                                </div>
-
-                            </section>
-                            <section class="showcase bg-white">
-                                <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
-                                    <!--all content wrapper-->
-
-                                    <div class="row no-gutters">
-                                        <!--heading style-->
-                                        <div class="col-lg-12">
-
-                                            <h3 class="text-greyish-brown-three font-weight-bold">展示台三：新幹線0系介紹
-                                            </h3>
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row no-gutters text-brownish-grey-two px-4">
-                                        <!--content style-->
-                                        <div class=" col-lg-9">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                世界高速鐵路先驅的傳奇-新幹線「0系」
-                                            </h4>
-                                            <p class="pt-2">
-                                                「0系」是集日本鐵道技術之大成，
-                                                1964年10月1日東京奧運會舉辦前夕，這項凝聚日本鐵路人心血的高速鐵路科技正式通車，將東京到大阪從過去的七小時，大幅縮短成為四小時，並在營運的第二年達到了令世人艷羨的210公里時速。
-                                            </p>
-                                            <p class="pt-2">
-                                                「0系」新幹線電車在日本鐵道上奔馳了44個年頭之久，且未曾發生任何傷亡事故，寫下「安全神話」的「0系」於2008年功成身退。因新幹線「0系」成功的鐵道科技，也啟發了全球各地高速鐵路的研發，促使法國的TGV（1981年）和德國的ICE（1991年）相繼問世。新幹線「0系」開啟世界高速鐵路新紀元，以創新的科技，重新定義人類的生活與產經模式。
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="col-0 col-lg-3 align-self-center d-lg-flex justify-content-lg-center pt-4 d-none d-lg-block">
-                                            <img data-src="img/orian/orian-3-1.png" class="lazyload w-75"
-                                                alt="世界第一條高速鐵路 東海新幹線">
-                                        </div>
-
-
-
-
-                                        <div class="col-lg-12">
-                                            <h4 class="pt-4 font-weight-bolder">新幹線「0系」之命名
-                                            </h4>
-                                            <p class="pt-2">
-                                                新幹線（新幹線／しんかんせん／Shinkansen）是日本的高速鐵路系統，採用標準軌（1435mm）之軌距，之所以稱做「新幹線」，是因為它是全新的幹線，與既有的「在來線」不相同。日本《全國新幹線鐵道整備法》中，將新幹線定義為「列車在主要區間能夠以每小時200公里以上的高速度行駛之幹線鐵路」。
-                                                「0系」初期只被稱為「新幹線電車」，而官方內部名稱是「000系」，並未對外公布。一直到東北、上越新幹線的200系投入服務後，才開始被稱為「0系」。
-
-                                            </p>
-                                            <h4 class="pt-4 font-weight-bolder">新幹線「0系」設計
-                                            </h4>
-                                            <p class="pt-2">
-
-                                                1950年代末期，隨著日本在二戰後，百業待興，其中以東京都區部和大阪市最為迫切高速交通。東海道新幹線建設之初的國鐵總裁十河信二任命國鐵總工程師島秀雄擔任列車的設計總指揮。
-                                            </p>
-
-                                            <img class="lazyload img-fluid w-100 py-4"
-                                                data-src="img/orian/orian-3-5.jpg" alt="象徵時代流行文化的0系車體塗裝">
-                                        </div>
+                                    <div class=" col-md-8">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            日本版式軌道(J-SLAB)
+                                        </h4>
+                                        <p class="pt-2">
+                                            在橋梁段，選擇同受地震所苦的「日本版式軌道」(J-SLAB)。日本版式軌道以混凝土預鑄製作，再搬運到橋梁上鋪設，並以CA砂漿固定，能夠兼顧軌道品質與施工速率，因此採用日本版式軌道，約占台灣高鐵軌道全線80.9%。(展區使用此形式軌道)
+                                            (LVT)、日本版式軌道(J-SLAB)、德國式軌道版(Rheda)、道碴軌道(Ballast
+                                            Track)以及只出現在台北站的嵌入式軌道
+                                            (Embedded Rail System)。
+                                        </p>
 
                                     </div>
+                                    <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
+                                        <img data-src="img/orian/orian-5-1.jpg"
+                                            class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
+                                            alt="日本版式軌道(J-SLAB) ">
+                                    </div>
+                                    <div class=" col-md-8">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            德國軌道版(Rheda 2000)
+                                        </h4>
+                                        <p class="pt-2">
+                                            靠近車站與車站內的版式軌道，選用「德國式軌道版」(Rheda軌道),能夠非常精準地將軌道定位，搭配轉換軌道的系統(轉轍器)提供最安全的措施，約占台灣高鐵軌道全線14%。
+                                        </p>
 
-
-
-
-                                </div>
-                            </section>
-                            <section class="showcase">
-                                <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
-                                    <!--all content wrapper-->
-
-                                    <div class="row no-gutters">
-                                        <!--heading style-->
-                                        <div class="col-lg-12">
-
-                                            <h3 class="text-greyish-brown-three font-weight-bold">展示台四：花魁車剖面模型
-                                            </h3>
-
-                                        </div>
+                                    </div>
+                                    <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
+                                        <img data-src="img/orian/orian-5-2.jpg"
+                                            class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
+                                            alt="德國軌道版(Rheda 2000) ">
                                     </div>
 
+                                    <div class=" col-md-8">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            低振動軌道(LVT)
+                                        </h4>
+                                        <p class="pt-2">
+                                            在台北地下段(自板橋到南港)，台灣高鐵會行經台北都會區，為避免附近居民受到振動與噪音影響，選擇「低振動軌道」(Low
+                                            Vibration
+                                            Trackform,LVT)以混凝土塊下的雙層彈性橡膠墊板吸收列車行駛的壓力，減低振動與噪音，約占台灣高鐵軌道全線3.6%。
+                                        </p>
 
-                                    <div class="row no-gutters text-brownish-grey-two px-4">
-                                        <!--content style-->
-                                        <div class="">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                花魁車剖析及限界測量工作
-                                            </h4>
-                                            <p class="pt-2">
-                                                台灣高鐵設計階段中，路線上各橫斷面，尤其月台、隧道、橋涵等處所保留的淨空範圍，均須符合建築界限規範。完工後亦須以各種測量手段來確認，這時就需要「限界測量車」登場了。
-                                            </p>
-                                            <p class="pt-2">
-                                                「0系花魁車」主要是擔任限界測量任務，負責高鐵興建期間檢視車站結構、月台設施、橋梁隧道等結構是否超出建築界限，而侵入鐵道路線淨空範圍內，方能確保高鐵未來行駛安全。
-                                            </p>
-                                            <p class="pt-2">
-                                                為了測試沿線的淨空是否合格，在日本九州博多總合車輛所改裝這輛0系，除了拆除客室內部分座椅，加裝測量儀器，還在車頂改裝了觀測小窗，供工程人員探頭監視之用。而在車外，則有探針及超音波探測器，環繞車身兩側，能在前進時偵測車身與建築之距離，以及是否與碰觸到任何障礙物。由於這輛「0系花魁車」來台後已無動力，不能自力行駛，必須由同樣來自日本的DD14型柴液機車推進，方能執行任務。
-                                            </p>
-                                            <img class="lazyload img-fluid w-100 py-4"
-                                                data-src="img/orian/orian-4-1.jpg" alt="花魁車於2004年擔任限界測量任務 ">
-                                            <img class="lazyload img-fluid w-100 py-4"
-                                                data-src="img/orian/orian-4-2.jpg" alt="執行限界測量圖示說明">
-                                        </div>
+                                    </div>
+                                    <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
+                                        <img data-src="img/orian/orian-5-3.jpg"
+                                            class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100" alt="低振動軌道(LVT) ">
+                                    </div>
 
+                                    <div class=" col-md-8">
+                                        <h4 class="pt-4 font-weight-bolder">
+                                            道碴軌道(BallastTrack)
+                                        </h4>
+                                        <p class="pt-2">
+                                            道碴的用途是減少列車對軌道與地面的壓力，也增加排水性。
+
+                                            台灣高鐵只在少部分平面地段使用，如左營車站與維修基地，避免平面上列車行駛噪音影響到居民的生活品質。</p>
+
+                                    </div>
+                                    <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
+                                        <img data-src="img/orian/orian-5-4.jpg"
+                                            class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
+                                            alt="道碴軌道(BallastTrack) ">
                                     </div>
 
                                 </div>
-                            </section>
 
-                            <section class="showcase bg-white">
-                                <div class="d-flex flex-column showcase-text text-left py-md-5 container-xl mx-auto">
-                                    <!--all content wrapper-->
 
-                                    <div class="row no-gutters">
-                                        <!--heading style-->
-                                        <div class="col-lg-12">
 
-                                            <h3 class="text-greyish-brown-three font-weight-bold">展示台五：軌道路床介紹
-                                            </h3>
 
-                                        </div>
-                                    </div>
+                            </div>
+                        </section>
 
 
-                                    <div class="row no-gutters text-brownish-grey-two px-4">
-                                        <!--content style-->
-                                        <div class="">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                軌道路床形式
-                                            </h4>
-                                            <p class="pt-2">
-                                                台灣高鐵為了因應沿線地質條件以及提供最安全與最高品質的乘坐效果，在軌道路床的設計概念分為低振動軌道(LVT)、日本版式軌道(J-SLAB)、德國式軌道版(Rheda)、道碴軌道(Ballast
-                                                Track)以及只出現在台北站的嵌入式軌道 (Embedded Rail System)。
-                                                (LVT)、日本版式軌道(J-SLAB)、德國式軌道版(Rheda)、道碴軌道(Ballast
-                                                Track)以及只出現在台北站的嵌入式軌道
-                                                (Embedded Rail System)。
-                                            </p>
 
-                                        </div>
-                                        <div class=" col-md-8">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                日本版式軌道(J-SLAB)
-                                            </h4>
-                                            <p class="pt-2">
-                                                在橋梁段，選擇同受地震所苦的「日本版式軌道」(J-SLAB)。日本版式軌道以混凝土預鑄製作，再搬運到橋梁上鋪設，並以CA砂漿固定，能夠兼顧軌道品質與施工速率，因此採用日本版式軌道，約占台灣高鐵軌道全線80.9%。(展區使用此形式軌道)
-                                                (LVT)、日本版式軌道(J-SLAB)、德國式軌道版(Rheda)、道碴軌道(Ballast
-                                                Track)以及只出現在台北站的嵌入式軌道
-                                                (Embedded Rail System)。
-                                            </p>
-
-                                        </div>
-                                        <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
-                                            <img data-src="img/orian/orian-5-1.jpg"
-                                                class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
-                                                alt="日本版式軌道(J-SLAB) ">
-                                        </div>
-                                        <div class=" col-md-8">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                德國軌道版(Rheda 2000)
-                                            </h4>
-                                            <p class="pt-2">
-                                                靠近車站與車站內的版式軌道，選用「德國式軌道版」(Rheda軌道),能夠非常精準地將軌道定位，搭配轉換軌道的系統(轉轍器)提供最安全的措施，約占台灣高鐵軌道全線14%。
-                                            </p>
-
-                                        </div>
-                                        <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
-                                            <img data-src="img/orian/orian-5-2.jpg"
-                                                class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
-                                                alt="德國軌道版(Rheda 2000) ">
-                                        </div>
-
-                                        <div class=" col-md-8">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                低振動軌道(LVT)
-                                            </h4>
-                                            <p class="pt-2">
-                                                在台北地下段(自板橋到南港)，台灣高鐵會行經台北都會區，為避免附近居民受到振動與噪音影響，選擇「低振動軌道」(Low
-                                                Vibration
-                                                Trackform,LVT)以混凝土塊下的雙層彈性橡膠墊板吸收列車行駛的壓力，減低振動與噪音，約占台灣高鐵軌道全線3.6%。
-                                            </p>
-
-                                        </div>
-                                        <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
-                                            <img data-src="img/orian/orian-5-3.jpg"
-                                                class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
-                                                alt="低振動軌道(LVT) ">
-                                        </div>
-
-                                        <div class=" col-md-8">
-                                            <h4 class="pt-4 font-weight-bolder">
-                                                道碴軌道(BallastTrack)
-                                            </h4>
-                                            <p class="pt-2">
-                                                道碴的用途是減少列車對軌道與地面的壓力，也增加排水性。
-
-                                                台灣高鐵只在少部分平面地段使用，如左營車站與維修基地，避免平面上列車行駛噪音影響到居民的生活品質。</p>
-
-                                        </div>
-                                        <div class=" col-md-4 align-self-center d-md-flex justify-content-md-center">
-                                            <img data-src="img/orian/orian-5-4.jpg"
-                                                class="lazyload px-0 py-4 pl-md-1 pl-lg-4 py-md-4 w-100"
-                                                alt="道碴軌道(BallastTrack) ">
-                                        </div>
-
-                                    </div>
-
-
-
-
-                                </div>
-                            </section>
-                        </div>
-
-                        <div id="en" class="lang" style="display:none">
-                            <section class="showcase bg-white">
-                                <!--探索花魁車 頁-->
-
-
-                                <div class="d-flex flex-column showcase-text text-left py-5 container-xl mx-auto">
-                                    <!--all content wrapper-->
-
-                                    <div class="row no-gutters">
-                                        <div class="col text-center">
-
-                                            <h2 class="text-greyish-brown-three">Lorem ipsum dolor sit amet </h2>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="row no-gutters">
-                                        <!--heading style-->
-                                        <div class="col-lg-12">
-
-                                            <h3 class="text-greyish-brown-three font-weight-bold">Lorem ipsum dolor
-                                                sit amet
-                                            </h3>
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row no-gutters text-brownish-grey-two px-4 pt-4">
-                                        <!--content style-->
-                                        <div class=" col-lg-9">
-                                            <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-                                                tenetur error dolorem iure cum cumque debitis dolores vero eaque.
-                                                Voluptatem libero alias id cupiditate? At eum delectus quaerat
-                                                maiores minus exercitationem blanditiis voluptas animi consectetur
-                                                beatae. Ducimus illum placeat, saepe est odio obcaecati officia
-                                                dolore nesciunt corrupti autem commodi quam?
-                                            </p>
-                                            <p class="pt-2">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nemo
-                                                possimus sequi obcaecati natus, quidem tenetur hic eius ut et
-                                                voluptatem voluptas rem dolor id. Cupiditate a porro mollitia, ea
-                                                fugiat aut voluptates quod reiciendis impedit deserunt placeat
-                                                dolorum quisquam repellat illum voluptate temporibus voluptatum!
-                                                Dicta recusandae quaerat inventore porro?
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="col-0 col-lg-3 align-self-center d-lg-flex justify-content-lg-center pt-4 d-none d-lg-block">
-                                            <img data-src="img/orian/orian-1-2.png" class="lazyload w-75" alt="XXX">
-                                        </div>
-
-
-
-                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-1-3.png"
-                                            alt="XXX">
-
-
-                                        <div class="col-lg-12 no-gutters">
-                                            <h4 class="pt-4 font-weight-bolder">Lorem ipsum dolor sit amet
-                                            </h4>
-                                            <p class="pt-2">
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro
-                                                rerum sit culpa, minus ullam voluptas voluptatibus labore possimus
-                                                dicta animi quos adipisci voluptatum. Assumenda voluptas provident
-                                                dolor? Dolore atque rerum veritatis nam, porro facere eveniet
-                                                molestiae quia soluta minus dolor distinctio sequi tempore omnis
-                                                adipisci possimus repellendus eos cupiditate mollitia.
-                                            </p>
-                                            <p class="pt-2">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo
-                                                ipsam aliquam voluptas facilis? Nam voluptate natus accusantium
-                                                exercitationem magni aperiam obcaecati, aliquid blanditiis quidem
-                                                alias unde molestiae, voluptates ratione velit temporibus ab aut ut
-                                                itaque esse quis dolores facere eius nostrum. Nam asperiores
-                                                voluptates obcaecati sequi sint numquam quidem aspernatur, at,
-                                                laborum corporis eveniet sit rerum ad culpa, commodi natus ipsam
-                                                ipsum tempora temporibus. Amet qui dignissimos optio vel id quos
-                                                facere illo, iste debitis tempora culpa sed assumenda?
-                                            </p>
-                                            <p class="pt-2">
-
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quod
-                                                minima ut culpa sapiente accusantium, excepturi sed obcaecati sequi
-                                                architecto eum perspiciatis consectetur, aperiam laudantium
-                                                assumenda! Maxime eum incidunt error? </p>
-                                        </div>
-
-                                    </div>
-
-
-
-
-                                </div>
-
-
-
-                            </section>
-
-                        </div>
-
-                        <div id="jp" class="lang" style="display:none">
-                            <section class="showcase bg-white">
-                                <!--探索花魁車 頁-->
-
-
-                                <div class="d-flex flex-column showcase-text text-left py-5 container-xl mx-auto">
-                                    <!--all content wrapper-->
-
-                                    <div class="row no-gutters">
-                                        <div class="col text-center">
-
-                                            <h2 class="text-greyish-brown-three">台南展區 - 花魁車地景公園</h2>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="row no-gutters">
-                                        <!--heading style-->
-                                        <div class="col-lg-12">
-
-                                            <h3 class="text-greyish-brown-three font-weight-bold">ショーケース 1:
-                                                展示ホールでのディスカッションと台湾への旅
-                                            </h3>
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row no-gutters text-brownish-grey-two px-4 pt-4">
-                                        <!--content style-->
-                                        <div class=" col-lg-9">
-                                            <p>
-                                                台湾高速鉄道公社は、2003年に高速鉄道の建設期間中に高速鉄道の重要な史跡の募集、調査、保存、維持管理を開始し、台湾初の高速鉄道を正式に設立しました。
-                                                2017年に桃園高速鉄道運営棟にある「台湾高速鉄道発見館」は、台湾の高速鉄道技術と人文・歴史教育の振興に尽力しています。高速鉄道発見館は、世界初の高速鉄道「0系花」のコレクションを正式に引き継ぎ、世界の鉄道文化遺産の保存・維持・継承という重要な使命を担ってきました。
-                                            </p>
-                                            <p class="pt-2">
-                                                花カーランドスケープパークの建築構造は、3組の木の吊り梁を用い、凹弧は高速鉄道のスピード感と流れを象徴し、また新幹線0系車両のカーブを反映しており、3つの軸が千鳥状に配置されています鉄道の「扇形車庫」をイメージした構造と、ゼロから無限までの展開要素を凝らした展示空間
-                                                0は車両と台湾の高速鉄道の物語。大井蘭自動車景観公園は台南まで伸びる台湾高速鉄道発見館の文化遺物展示エリアでもあり、台湾高速鉄道公司が車両文化遺物を展示する最初の公共スペースとなっています。
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="col-0 col-lg-3 align-self-center d-lg-flex justify-content-lg-center pt-4 d-none d-lg-block">
-                                            <img data-src="img/orian/orian-1-2.png" class="lazyload w-75" alt="XXX">
-                                        </div>
-
-
-
-                                        <img class="lazyload img-fluid w-100 py-4" data-src="img/orian/orian-1-3.png"
-                                            alt="XXX">
-
-
-                                        <div class="col-lg-12 no-gutters">
-                                            <h4 class="pt-4 font-weight-bolder">世界初の高速鉄道「0系」が台湾に登場
-                                            </h4>
-                                            <p class="pt-2">
-                                                「0系電車」は、世界初の高速鉄道であり、日本の新幹線の始祖でもあり、2007年8月に日本の機械遺産に登録され、その優れた機械的成果を浮き彫りにし、人の移動と生活に革命的な変化をもたらしました。貢献。新幹線0系電車は44年間運行されていましたが、2008年に世界の高速鉄道から正式に廃止されました。
-
-                                            </p>
-                                            <p class="pt-2">
-                                                この世界初の高速鉄道「0系」(No.21-5035/Original No.: 21-1032)
-                                                台湾高速鉄道建設時代に端を発し、JR西日本は日本の「台湾新幹線株式会社」(TSIEC)に譲り受け、 2004年
-                                                高速鉄道の基幹電気機械システムを建設し、海を渡った彼は台湾に来て、高速鉄道、通称「おいらん」の建設中に「境界調査車」として働いた。無事引退した「0系」花も、TSIECの請負業者から台湾高速鉄道株式会社に寄贈され、2012年には台湾高速鉄道発見博物館のコレクションに移管され、正式に高鉄になりました。高速鉄道の文化財であり、日本では世界で2番目に海外で唯一の0系です。
-                                            </p>
-                                            <p class="pt-2">
-
-                                                0系花は、幾度かの調査と修理を経て、最終的に高速鉄道の台南駅に選定されました.「台湾高速鉄道発見館 - 花 Car
-                                                Carカー景観公園」に位置しています.台湾の「現地化」における「花0」の機能は、外国に生まれ変わっただけでなく、台湾の高速鉄道と融合し、台湾の高速鉄道文化と歴史の一部となった。
-                                            </p>
-                                        </div>
-
-                                    </div>
-
-
-
-
-                                </div>
-
-
-
-                            </section>
-                        </div>
 
 
 
@@ -858,7 +675,7 @@
                                 <div class="row no-gutters">
                                     <div class="col-lg-12">
 
-                                        <h3 class="text-greyish-brown-three font-weight-bold">
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">
                                             實際操作說明
                                         </h3>
 
@@ -901,7 +718,7 @@
                                     <!--heading style-->
                                     <div class="col-lg-12">
 
-                                        <h3 class="text-greyish-brown-three font-weight-bold">台灣高鐵文史庫房的創生與遷移
+                                        <h3 class="px-4 text-greyish-brown-three font-weight-bold">台灣高鐵文史庫房的創生與遷移
                                         </h3>
 
                                     </div>
@@ -997,19 +814,21 @@
                 <div class="col-md-12 h-50 text-center my-auto">
                     <ul class="list-inline mb-2">
                         <li class="list-inline-item">
-                            <a href="#" class="text-white-50">常見問題</a>
+                            <a href="information.html#QA" class="text-white-50">常見問題</a>
                         </li>
                         <li class="list-inline-item text-white-50">|</li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-white-50">聯絡我們</a>
+                            <a href="information.html#info" class="text-white-50">聯絡我們</a>
                         </li>
                         <li class="list-inline-item text-white-50">|</li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-white-50">個人資料保護專區</a>
+                            <a href="https://www.thsrc.com.tw/ArticleContent/d1fa3bcb-a016-47e2-88c6-7b7cbed00ed5"
+                                target="_blank" class="text-white-50">個人資料保護專區</a>
                         </li>
                         <li class="list-inline-item text-white-50">|</li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-white-50">智慧財產權及免責條款宣告</a>
+                            <a href="https://www.thsrc.com.tw/ArticleContent/b9dcb8ea-02ab-4726-b71d-335904dbd86b"
+                                target="_blank" class="text-white-50">智慧財產權及免責條款宣告</a>
                         </li>
                     </ul>
                     <p class="text-muted small text-white-50">
@@ -1028,27 +847,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="js/parallax.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/exhibition.js"></script>
     <script src="js/lazysizes.min.js"></script>
+    <!--script src="js/scrolling-tabs.js"></script-->
 
-    <script type="text/javascript">
-        //視差主圖下拉放大
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            $(".zoom").css({
-                backgroundSize: (120 + scroll / 15) + "%",
-                top: -(scroll / 10) + "%",
-            });
-        });
 
-    </script>
     <script>
-        window.onscroll = function () { myFunction() };
+        window.onscroll = function () {
+            myFunction()
+        };
 
         const subNav = document.getElementById("subNav");
 
@@ -1067,7 +879,7 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
 
-        function openLang(evt, langName) {
+        /*function openLang(evt, langName) {
             var i, x, tablinks;
             x = document.getElementsByClassName("lang");
             for (i = 0; i < x.length; i++) {
@@ -1079,7 +891,7 @@
             }
             document.getElementById(langName).style.display = "block";
             evt.currentTarget.className += " text-yellow";
-        }
+        }*/
 
         // The function applies the offset
         function offsetAnchor() {
@@ -1106,13 +918,27 @@
 
         $('#subNav a').click(function (e) {
             $(this).tab('show');
-            
+
             window.location.hash = this.hash;
-            
+
 
         });
-
     </script>
+    <!--script>
+        ;(function ($) {
+            'use strict';
+            $(activate);
+
+            function activate() {
+                $('.nav-pills').scrollingTabs({
+                    enableSwiping: true,
+                    scrollToTabEdge: true,
+                    disableScrollArrowsOnFullyScrolled: true
+                })
+
+            }
+        }(jQuery));
+    </script-->
 
 </body>
 
