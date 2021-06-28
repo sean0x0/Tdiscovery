@@ -354,7 +354,7 @@ main {
   left: 0;
   background-size: cover;
   background-position: bottom 50% right 50%;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .header__in {
@@ -397,9 +397,19 @@ main {
 
 .header-bg-mobile {
   width: 100vw;
+  height: auto;
   position: fixed;
   top: 0;
   left: 0;
+  object-fit: cover;
+}
+@media all and (max-width: 450px) and (min-height: 750px) {
+
+  .header-bg-mobile {
+    width: auto;
+    height: 100vh;
+    
+  }
 }
 
 video {

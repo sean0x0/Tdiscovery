@@ -16396,9 +16396,9 @@ footer.footer {
 }
 
 #nav-gradient.show {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   padding-top: 0;
   padding-bottom: 0rem;
   background-image: radial-gradient(circle at 19% 27%,
@@ -16709,7 +16709,13 @@ header::before {
   background-color: rgba(78, 69, 62, 0.4);
 }
 
-
+@media only screen and (min-width: 1400px) {
+  header {
+      height: 45vh;
+      background-position: center bottom 40%;
+      position: relative;
+  }
+}
 @media only screen and (max-width: 991.98px) {
   header {
       height: 45vh;
@@ -17844,7 +17850,7 @@ header::before {
     top: 65px;
     padding-top: 10px;
     background-color: var(--beige);
-    z-index: 1000000000000000;
+    z-index: 10000000;
     text-align: center;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .3));
     overflow: auto !important;
@@ -17863,4 +17869,12 @@ header::before {
   }
 }
 
-/* --------------- 線上探索 語言------------------ */
+/* --------------- 隱藏捲軸------------------ */
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
