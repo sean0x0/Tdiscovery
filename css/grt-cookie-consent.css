@@ -1,0 +1,91 @@
+.grt-cookie {
+	display:none;
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	padding: 10px;
+	background:#FFF;
+	color:#333;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	z-index:99999999999999999;
+}
+
+.grt-cookie-active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.grt-cookie-active:hover {
+	transition: 0.5s;
+    opacity: 1;
+}
+.grt-cookie p {
+	font-size: 15px;
+	margin: 0;
+	padding:0;
+	line-height: 1.35;
+	color:#222;
+	font-weight: normal;
+}
+
+.grt-cookie p a {
+	color:#333;
+	text-decoration: underline !important;
+	font-size: 15px;
+	margin: 0;
+	padding:0;
+    font-weight: bolder;
+}
+
+.grt-cookie-button {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: normal;
+	font-size: 0.9rem;
+	padding: 6px 16px;
+	margin-left:12px;
+	background: #3b3734;
+	color: #FFF;
+	white-space: nowrap;
+}
+
+.grt-cookie-button-no {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: normal;
+	font-size: 0.9rem;
+	padding: 6px 16px;
+	margin-left:12px;
+	background: #73675e;
+	color: rgb(204, 204, 204);
+	white-space: nowrap;
+}
+
+
+@media (max-width:767px) {
+
+	.grt-cookie {
+		flex-direction: column;
+		padding: 0.9rem;
+	}
+
+	.grt-cookie p, .grt-cookie p a {
+		font-size: 0.7rem;
+	}
+
+	.grt-cookie-button {
+		font-size:0.7rem;
+		padding: 3px 14px;
+		margin:8px 0 0 0;
+	}
+    .grt-cookie-button-no {
+		font-size:0.7rem;
+		padding: 3px 14px;
+		margin:8px 0 0 0;
+	}
+
+}
