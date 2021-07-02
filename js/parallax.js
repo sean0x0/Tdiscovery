@@ -6,4 +6,12 @@ $(window).scroll(function () {
         //"-webkit-filter": "blur(" + (scroll / 100) + "px)",
         //filter: "blur(" + (scroll / 100) + "px)"
     });
+    $("video").css({
+        
+        top: -(scroll / 10) + "%",
+        //"-webkit-filter": "blur(" + (scroll / 100) + "px)",
+        //filter: "blur(" + (scroll / 100) + "px)"
+        height: (100 + scroll / 20) + "%",
+    });
+    
 });
