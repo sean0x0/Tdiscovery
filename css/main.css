@@ -1,4 +1,4 @@
-/*主圖視差與文案樣式*/
+/*首頁主圖視差與文案樣式*/
 .contents {
   width: 100%;
   overflow: hidden;
@@ -60,291 +60,18 @@ main {
   );
 }
 
-.dummy-scroll {
-  position: relative;
-  z-index: 1;
-}
-
-.dummy-scroll-child {
-  position: relative;
-  z-index: 1;
-  height: 60vh !important;
+header {
+  background-image: none;
+  height: 100vh !important;
 }
 
 
-.all-page {
-  visibility: visible;
-}
-
-.button-border {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  line-height: 1.1;
-  position: relative;
-  border: 0;
-  color: #fff;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  background: 0 0;
-}
-
-@media all and (min-width: 1025px) {
-  .button-border {
-    font-size: 13px;
-    font-size: 0.8125rem;
+@media only screen and (max-width: 575.99px) {
+  header {
+      height: 100vh !important;
+      background-image: url(img/mobile_bg.jpg);
   }
 }
-
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .button-border {
-    font-size: 13px;
-    font-size: 0.8125rem;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .button-border {
-    font-size: 11px;
-    font-size: 0.6875rem;
-  }
-}
-
-@media all and (max-width: 767px) and (max-width: 414px) {
-  .button-border {
-    font-size: 3.4375vw;
-  }
-}
-
-@media all and (max-width: 767px) and (min-width: 415px) {
-  .button-border {
-    font-size: 14.23125px;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .button-border {
-    width: 160px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .button-border {
-    width: 160px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.button-border:after,
-.button-border:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.button-border:after {
-  background-color: var(--light-mustard);
-}
-
-.button-border--black {
-  color: #222;
-}
-
-.button-border--black:after {
-  background-color: #222;
-}
-
-.button-border__label {
-  display: inline-block;
-  position: relative;
-  z-index: 10;
-}
-
-.button-border__line-h:after,
-.button-border__line-h:before,
-.button-border__line-v:after,
-.button-border__line-v:before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: 10;
-  background-color: var(--light-mustard);
-}
-
-.button-border__line-h--black:after,
-.button-border__line-h--black:before,
-.button-border__line-v--black:after,
-.button-border__line-v--black:before {
-  background-color: #222;
-}
-
-.button-border__line-v:after,
-.button-border__line-v:before {
-  width: 2px;
-  top: 0;
-  bottom: 0;
-}
-
-.button-border__line-v:before {
-  left: 0;
-}
-
-.button-border__line-v:after {
-  right: 0;
-}
-
-.button-border__line-h:after,
-.button-border__line-h:before {
-  height: 2px;
-  right: 0;
-  left: 0;
-}
-
-.button-border__line-h:before {
-  top: 0;
-}
-
-.button-border__line-h:after {
-  bottom: 0;
-}
-
-.button-border__label {
-  opacity: 0;
-  -webkit-transition-property: color, opacity;
-  transition-property: color, opacity;
-}
-
-.button-border__line-h:after,
-.button-border__line-h:before,
-.button-border__line-v:after,
-.button-border__line-v:before {
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
-.button-border__line-v:after,
-.button-border__line-v:before {
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.button-border__line-v:before {
-  -webkit-transform-origin: bottom;
-  transform-origin: bottom;
-}
-
-.button-border__line-v:after {
-  -webkit-transform-origin: top;
-  transform-origin: top;
-}
-
-.button-border__line-h:after,
-.button-border__line-h:before {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-
-.button-border__line-h:before {
-  -webkit-transform-origin: left;
-  transform-origin: left;
-}
-
-.button-border__line-h:after {
-  -webkit-transform-origin: right;
-  transform-origin: right;
-}
-
-.button-border:after {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: left;
-  transform-origin: left;
-  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
-.button-border.is-shown .button-border__label {
-  opacity: 1;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-
-.button-border.is-shown .button-border__line-v:after,
-.button-border.is-shown .button-border__line-v:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-}
-
-.button-border.is-shown .button-border__line-h:after,
-.button-border.is-shown .button-border__line-h:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.button-border.is-shown:before {
-  opacity: 1;
-}
-
-.button-border.is-over .button-border__label {
-  color: #4e453e;
-  font-weight: bolder;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.button-border.is-over .button-border__label--black {
-  color: var(--light-mustard);
-}
-
-.button-border.is-over:after {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.button-border.is-leave .button-border__label {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.button-border.is-leave:after {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transform-origin: right;
-  transform-origin: right;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-}
-
 
 .header-bg {
   width: 100vw;
@@ -523,4 +250,39 @@ video {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+/*************** 立即預約 *****************/
+
+
+a.btn-booking {
+  border: 2px solid #f4be6c;
+  width: 160px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1);
+  color: #fff;
+}
+a.btn-booking i {
+  line-height: 2;
+}
+a.btn-booking:after {
+  content: "";
+  position: absolute;
+  transition: all 250ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  width: 0;
+  right: 0%;
+  bottom: 0;
+  height: 100%;
+  background: #f4be6c;
+  z-index: -1;
+}
+a.btn-booking:hover, a.btn-booking.hover {
+  color: #292827;
+}
+a.btn-booking:hover:after, a.btn-booking.hover:after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
