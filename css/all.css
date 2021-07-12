@@ -17510,11 +17510,16 @@ header::before {
 /* info */
 
 #announcement img {
-  width: auto;
-  height: 160px;
+  width: 70% !important;
+  /*height: 160px;*/
   padding: 15px 0 20px 0;
 }
 
+@media (max-width: 575.99px) { 
+#announcement img {
+  width: 100% !important;
+}
+}
 /*z-index*/
 
 .z-nav {
