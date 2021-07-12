@@ -202,8 +202,8 @@
             <div class="row container-xl mx-auto mx-0 px-0 overflow-hidden pt-3 pt-md-0">
                 <div class="col-md-7 order-md-2 bg-circle bg-circle-r circle-r mt-lg-auto" data-aos="fade-up"
                     data-aos-duration="1000">
-                    <img data-src="img/C1.png" class="lazyload showcase-img float-right right flip-none" alt="高鐵創生" data-aos="fade-up"
-                        data-aos-duration="3000" />
+                    <img data-src="img/C1.png" class="lazyload showcase-img float-right right flip-none" alt="高鐵創生"
+                        data-aos="fade-up" data-aos-duration="3000" />
                 </div>
                 <div class="col-md-5 order-md-1 showcase-text sm-latte my-auto">
                     <h2 class="text-greyish-brown">高鐵創生</h2>
@@ -222,8 +222,8 @@
         <section class="showcase container-fluid bg-greyish-brown px-0">
             <div class="row text-white mx-auto container-xl mx-0 px-0 overflow-hidden">
                 <div class="col-md-7 bg-circle mt-lg-auto circle-l" data-aos="fade-up" data-aos-duration="1000">
-                    <img data-src="img/C2.png" class="lazyload showcase-img float-left left" alt="高速時代" data-aos="fade-up"
-                        data-aos-duration="3000" />
+                    <img data-src="img/C2.png" class="lazyload showcase-img float-left left" alt="高速時代"
+                        data-aos="fade-up" data-aos-duration="3000" />
                 </div>
                 <div class="col-md-5 my-auto showcase-text sm-coffee my-auto">
                     <h2>高速時代</h2>
@@ -241,8 +241,8 @@
             <div class="row mx-auto container-xl mx-0 px-0 overflow-hidden pt-3 pt-md-0">
                 <div class="col-md-7 order-md-2 bg-circle bg-circle-r mt-lg-auto circle-r" data-aos="fade-up"
                     data-aos-duration="1000">
-                    <img data-src="img/C3.png" class="lazyload showcase-img float-right right py-md-3 bg-circle-r" alt="維修解密"
-                        data-aos="fade-up" data-aos-duration="3000" />
+                    <img data-src="img/C3.png" class="lazyload showcase-img float-right right py-md-3 bg-circle-r"
+                        alt="維修解密" data-aos="fade-up" data-aos-duration="3000" />
                 </div>
                 <div class="col-md-5 order-md-1 showcase-text sm-latte my-auto">
                     <h2 class="text-greyish-brown">維修解密</h2>
@@ -259,8 +259,8 @@
         <section class="showcase container-fluid bg-greyish-brown px-0">
             <div class="row text-white mx-auto container-xl mx-0 px-0 overflow-hidden">
                 <div class="col-md-7 mt-lg-auto px-0 d-none d-lg-block">
-                    <img data-src="img/C4.png" class="lazyload showcase-img float-left left" alt="榮耀願景" data-aos="fade-up"
-                        data-aos-duration="3000" />
+                    <img data-src="img/C4.png" class="lazyload showcase-img float-left left" alt="榮耀願景"
+                        data-aos="fade-up" data-aos-duration="3000" />
                 </div>
                 <div class="col-md-7 mt-lg-auto px-0 overflow-hidden d-lg-none sm-glory">
                     <img src="img/C4-mobile.png" class="showcase-img float-left" alt="榮耀願景" data-aos="fade-up"
@@ -283,8 +283,8 @@
             <div class="row mx-auto container-xl mx-0 px-0 overflow-hidden pt-3 pt-md-0">
                 <div class="col-md-7 order-md-2 bg-circle bg-circle-r mt-lg-auto circle-r" data-aos="fade-up"
                     data-aos-duration="1000">
-                    <img data-src="img/C5.png" class="lazyload showcase-img float-right right py-md-3 bg-circle-r" alt="公開的密室"
-                        data-aos="fade-up" data-aos-duration="3000" />
+                    <img data-src="img/C5.png" class="lazyload showcase-img float-right right py-md-3 bg-circle-r"
+                        alt="公開的密室" data-aos="fade-up" data-aos-duration="3000" />
                 </div>
                 <div class="col-md-5 order-md-1 showcase-text sm-latte my-auto">
                     <h2 class="text-greyish-brown">公開的密室</h2>
@@ -363,18 +363,19 @@
     <script src="js/lazysizes.min.js"></script>
     <!--parallax-->
     <script src="js/parallax.js"></script>
+    <!-- No IE Support -->
+    <script src="https://cdn.jsdelivr.net/npm/ie-buster@1.1.0/dist/ie-buster.min.js"></script>
 
     <script>
         AOS.init();
 
         initialGDPR();
-        /*$(".grt-cookie").grtCookie({
-          textcolor: "#000",
-          background: "#f8f4ed",
-          buttonbackground: "#3b3734",
-          buttontextcolor: "#FFF",
-          duration: 365,
-        });*/
+
+        ieBuster({
+            mainText: "因應優化調整，本站不再支援 Internet Explorer 瀏覽器環境，為避免無法在本站正常瀏覽，建議您使用最新的 Google Chrome 瀏覽器。",
+            linkText: "馬上下載",
+            linkUrl: "https://www.google.com/chrome/"
+})
     </script>
 
     <script>
