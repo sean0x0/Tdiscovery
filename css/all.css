@@ -17510,7 +17510,7 @@ header::before {
 /* info */
 
 #announcement img {
-  width: 70% !important;
+  width: 50% !important;
   /*height: 160px;*/
   padding: 15px 0 20px 0;
 }
@@ -17523,7 +17523,7 @@ header::before {
 /*z-index*/
 
 .z-nav {
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .z-header {
@@ -17881,5 +17881,8 @@ html {
 }
 
 body::-webkit-scrollbar {
+  display: none;
+}
+#subNav::-webkit-scrollbar {
   display: none;
 }
