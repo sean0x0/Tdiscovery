@@ -29,6 +29,8 @@
     <link href="css/all.css" rel="stylesheet" />
     <link href="css/hamburger.css" rel="stylesheet" />
     <link href="css/TOC.css" rel="stylesheet">
+    <!--GDPR-->
+    <link href="css/gdpr/gdpr.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -150,7 +152,7 @@
                         <div class="col-lg-5">
                             <figure class="w-100 figure">
                                 <img data-src="img/OMC@1x.jpg"
-                                    data-srcset="img/OMC@1x.jpg 1x, img/OMC@2x.jpg 2x, img/OMC@3x.jpg 3x"
+                                    data-srcset="img/OMC_1x.jpg 1x, img/OMC_2x.jpg 2x, img/OMC_3x.jpg 3x"
                                     class="lazyload img-fluid pb-sm-4" alt="桃園運務中心">
                             </figure>
                         </div>
@@ -280,8 +282,10 @@
     <script src="js/gdpr/js.cookie-2.2.1.min.js"></script>
     <script src="js/gdpr/promise.min.js"></script>
     <script src="js/gdpr/sweetalert2.all.min.js"></script>
-    <!--script src="js/grt-cookie-consent.js"></script-->
+    <!--booking API-->
+    <script src="js/api/config.js"></script>
     <script>
+        initialGDPR();
         $(document).ready(function () {
             $('.hamburger').click(function () {
                 $('.hamburger').toggleClass('active');
