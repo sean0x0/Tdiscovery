@@ -1,4 +1,11 @@
 // 全站漢堡選單效果 
+
+$(document).ready(function () {
+  $('.hamburger').click(function () {
+      $('.hamburger').toggleClass('active');
+  })
+})
+
 // 只有小版會運作
 const hamburger = document.querySelector(".hamburger");
 const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -18,3 +25,4 @@ $(".hamburger").click(function () { //點擊漢堡選單時，小預約按鈕淡
   $("#small-booking").fadeToggle(250);
   $("body").toggleClass("overflow-hidden");
 });
+
