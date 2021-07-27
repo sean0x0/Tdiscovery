@@ -1,9 +1,24 @@
-﻿window.onload = function () {
+﻿
+window.onload = function () {
   const windowTop = $(window).scrollTop();
   $(".list-bullet ul li").removeClass("hollow");
-  $(".map section").removeClass("read"); 
+  $(".map section").removeClass("read");
   $("body, html").animate({ scrollTop: windowTop }, 1000); //頁面跳回頂部
 
+  var timer
+
+  $(window).on("resize", function () {
+    
+      window.clearTimeout(timer)
+      timer = window.setTimeout(function () {
+        console.log('scroll event') //callback your coding
+      }, 100)
+      $(".list-bullet ul li").removeClass("hollow");
+      $(".map section").removeClass("read");
+    
+
+
+  });
   //const bulletLast = $(".list-bullet li").siblings();
 
   //$(bulletLast).removeClass("hollow");
@@ -23,12 +38,12 @@
   //修正花魁車次選單底線樣式
   if ($("#orianTab > a").hasClass("active")) {
     $("#orianTab").addClass("orian-btline");
-    
-    $("#orian-tab").css("border","0");
+
+    $("#orian-tab").css("border", "0");
     $("#orianTab").removeClass("brown-underline");
   } else {
     $("#orianTab").removeClass("orian-btline");
-    
+
     $("#orianTab").addClass("brown-underline");
     $("#orianTab").removeClass("orian-btline");
   }
@@ -80,7 +95,7 @@
       venue: "A",
       title: "從台灣鐵道BOT史說起",
       desciption:
-        "許多國家鐵道的開始，多起於煤礦的運送，台灣也不例外。清代福建巡撫丁日昌為了軍事需求而開採煤礦，在基隆八斗子建立一段長2公里的鐵道，是台灣最早的鐵路。直到劉銘傳接任台灣第一任巡撫後，才正式建造可供人員乘坐的鐵路。日治時期，重新鋪設鐵道與拓展路線，從基隆到高雄的鐵路貫通，方便了日軍的運行與民間物品的流通。戰後，歷經鐵路柴油化、電氣化，最後於1992年完成環島鐵路網。而台灣高速鐵路也於2007年起正式成為了台灣鐵道的一份子。"
+        "許多國家鐵道的開始，多起於煤礦的運送，台灣也不例外。清代福建巡撫丁日昌因軍事需求而開採煤礦，在基隆八斗子建立一段長2公里的鐵道，是台灣最早的鐵路。直到劉銘傳接任台灣第一任巡撫後，才正式建造可供人員乘坐的鐵路。日治時期，重新鋪設鐵道與拓展路線，從基隆到高雄的鐵路貫通，方便了日軍的運行與民間物品的流通。戰後，歷經鐵路柴油化、電氣化，於1992年完成環島鐵路網。而台灣高速鐵路也在2007年，正式成為台灣鐵道一份子。"
     },
     {
       number: "03",
@@ -461,7 +476,7 @@
       venue: "B",
       title: "世界高鐵",
       desciption:
-        "世界第一條高速鐵路，為1964年10月1日通車的日本東海道新幹線，並開行新幹線0系列車，時速最高可達210公里。目前已有28個國家擁有高速鐵路系統，其中以日本新幹線、法國TGV、德國ICE為主要研發製造高鐵列車與核心系統的三個國家，世界各國依上述系統加以改良或研發高鐵，例如西班牙的Talgo是開發自法國TGV技術；中國的和諧號（CRH）則是集結瑞典Regina C2008、日本新幹線E2系及德國ICE3車體與技術，發展出中國高鐵。台灣也在2007年完成通車，正式加入世界高鐵的大家庭。"
+        "世界第一條高速鐵路，為1964年10月1日通車的日本東海道新幹線，並開行新幹線0系列車，時速最高可達210公里。目前已有28個國家擁有高速鐵路系統，以日本（新幹線）、法國（TGV）、德國（ICE）為主要研發製造高鐵列車與核心系統的國家，世界各國改良或研發高鐵，如西班牙的Talgo是開發自法國TGV技術；中國的和諧號（CRH）是集結瑞典Regina C2008、日本新幹線E2系及德國ICE3車體與技術所發展出來。台灣則在2007年完成通車，加入世界高鐵的大家庭。"
     },
     {
       number: "23",
@@ -574,7 +589,7 @@
 <figcaption class="col-xxl-5 figure-caption text-left info-box z-nav mt-xxl-0 px-0 ml-md-auto ml-xxl-0 mr-md-4 mr-xxl-0 pt-md-3 pt-lg-5 pt-xxl-0">
                   <div class="mx-xl-3 display-1 text-right d-none d-md-block text-toupe-30 d-xxl-none d-none d-md-block">${value.number
         }</div>
-                  <div class="text-left bg-white shadow p-4 mx-xl-3 mx-xxl-0 h-xxl-100 pt-xxl-5 pt-xxl-55">
+                  <div class="text-left bg-white shadow p-4 mx-xl-3 mx-xxl-0 h-xxl-100 pt-xxl-4">
                       <div class="mb-xxl-4 display-1 text-left text-toupe-30 d-none d-xxl-block">${value.number
         }</div>
                       <div class="h5 text-left text-warm-grey d-md-none">展區${value.number
@@ -678,7 +693,7 @@
           $(mapThis).addClass("read");
         }
 
-        
+
 
         let bulletList = $(".list-bullet");
         let mapList = $(".map");
@@ -725,8 +740,8 @@
 
 
 
-  
-  $(window).on("click", function (event) { 
+
+  $(window).on("click", function (event) {
     if ($("#orianTab > a.nav-link").hasClass("active")) {
       $("#orianTab").addClass("orian-btline");
       $("#orianTab").css(
@@ -735,7 +750,7 @@
       );
 
       $("#orianTab").removeClass("brown-underline");
-      $(".nav-pills .nav-link.active").css("border-bottom","0px !immportant")
+      $(".nav-pills .nav-link.active").css("border-bottom", "0px !immportant")
     } else {
       $("#orianTab").css(
         "border-bottom",
