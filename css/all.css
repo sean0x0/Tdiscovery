@@ -893,7 +893,7 @@ small,
 
 
   display: block !important;
-  border-bottom: 6px solid var(--greyish-brown-three);
+  border-bottom: 5.5px solid var(--greyish-brown-three);
 
 
   border-radius: 0 !important;
@@ -7363,7 +7363,7 @@ footer.footer {
   right: 51%;
   bottom: 0;
   background: var(--greyish-brown-three);
-  height: 6px;
+  height: 5px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.3s;
@@ -7439,7 +7439,7 @@ footer.footer {
     display: inline !important;
     border-bottom: 6px solid var(--light-mustard);
 
-    padding-bottom: 0.75rem !important;
+    padding-bottom: 0.771rem !important;
   }
 
   .brown-underline:before {
@@ -7450,7 +7450,7 @@ footer.footer {
     right: 51%;
     bottom: 0;
     background: var(--greyish-brown-three);
-    height: 6px;
+    height: 5px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
     -webkit-transition-duration: 0.3s;
