@@ -270,7 +270,7 @@ a.btn-booking i {
 a.btn-booking:after {
   content: "";
   position: absolute;
-  transition: all 250ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  transition: all 250ms ease-in-out;
   width: 0;
   right: 0%;
   bottom: 0;

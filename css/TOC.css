@@ -1,4 +1,19 @@
 /* 線上探索  */
+/*surface duo tablet*/
+@media (width: 720px) and (height: 540px) { #subNav {
+  -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+}
+@media (width: 540px) and (height: 720px) {
+  #subNav {
+    -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+      justify-content: center !important;
+  }
+  }
+
 .list-sec > section:nth-child(odd) {
   background-color: white;
 }

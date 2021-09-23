@@ -1524,11 +1524,14 @@ a.close.disabled {
     max-width: 1140px;
   }
 }
-
 .carousel {
   position: relative;
 }
 
+.carousel.pointer-event {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
 
 .carousel-inner {
   position: relative;
@@ -1596,7 +1599,22 @@ a.close.disabled {
   opacity: 1;
 }
 
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0s 2s;
+  transition: opacity 0s 2s;
+}
 
+@media (prefers-reduced-motion: reduce) {
+
+  .carousel-fade .active.carousel-item-left,
+  .carousel-fade .active.carousel-item-right {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -1621,6 +1639,24 @@ a.close.disabled {
   transition: opacity 0.15s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
 
 .carousel-control-prev {
   left: 0;
@@ -1634,6 +1670,21 @@ a.close.disabled {
   background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001));
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: 50% / 100% 100% no-repeat;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
 
 .carousel-indicators {
   position: absolute;
@@ -1651,6 +1702,28 @@ a.close.disabled {
 
   margin-left: 50px;
   list-style: none;
+}
+
+@media (max-width: 575.98px) {
+  .carousel-indicators {
+    position: absolute;
+
+bottom: 0;
+left: 0;
+z-index: 15;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+padding-left: 0;
+margin: 0;
+left: 50%;
+list-style: none;
+transform: translate(-50%, -50%);
+
+  }
 }
 
 .carousel-indicators li {
@@ -1672,6 +1745,13 @@ a.close.disabled {
   opacity: .5;
   -webkit-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-indicators li {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .carousel-indicators .active {
@@ -7635,7 +7715,14 @@ header::before {
   left: 0px;
   background-color: rgba(78, 69, 62, 0.4);
 }
-
+/***** for iPad Pro ********/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) and (min-height: 1200px) { header {
+  height: 45vh;
+  background-position: center bottom 40%;
+  position: relative;
+  }
+  }
+/***** for iPad Pro ********/
 @media only screen and (min-width: 1400px) {
   header {
       height: 45vh;
@@ -7656,740 +7743,858 @@ header::before {
       background-size: cover !important;
   }
 }
-
-
 /***************** 首頁 Section 開始探索*************************/
 
 /* 大於寬度1200 小於高度749.98 */
-@media (min-width: 1200px) and (max-height: 749.98px) {
-  .showcase {
-    overflow: hidden !important;
+@media (min-width: 1200px) and (max-height: 749.98px) { .showcase {
+  overflow: hidden !important;
   }
-
+  
   #exploration>section>div:first-child {
-
-    overflow: visible !important;
-    height: calc(100vh - 110px);
+  
+  overflow: visible !important;
+  height: calc(100vh - 110px);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(100vh - 110px);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(100vh - 110px);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: 50% -120%;
-    transition: 3.6s cubic-bezier(.78, .23, .27, .9);
-  }
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: 50% -120%;
+  transition: 3.6s cubic-bezier(.78, .23, .27, .9); }
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-    margin-bottom: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  margin-bottom: 3rem;
   }
-
+  
   /*探索圖片位置*****/
   .right {
-    margin-right: -35%;
+  margin-right: -35%;
   }
-
+  
   .left {
-    margin-left: -35%;
+  margin-left: -35%;
   }
-
-
-}
-
-/* 大於寬度1200 大於高度750 */
-@media (min-width: 1200px) and (min-height: 1080px) {
-  .showcase {
-    overflow: hidden !important;
+  
+  
   }
-
+  
+  /* 大於寬度1200 大於高度750 */
+  @media (min-width: 1200px) and (min-height: 1050px) { .showcase {
+  overflow: hidden !important;
+  }
+  
   #exploration>section>div:first-child {
-
-    overflow: visible !important;
-    height: calc(60vh);
+  
+  overflow: visible !important;
+  height: calc(50vh);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(60vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(50vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 8vh;
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 8vh;
   }
-
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 8vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 8vh;
+  
   }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   .p-truncate {
-
-    margin-bottom: 3rem;
+  
+  margin-bottom: 3rem;
   }
-
+  
   .right {
-    margin-right: -35vh;
+  margin-right: -25vh;
   }
-
+  
   .left {
-    margin-left: -35vh;
+  margin-left: -25vh;
   }
-}
-
-/* 大於寬度1200 大於高度750 */
-@media (min-width: 1200px) and (min-height: 750px) and (max-height: 1079.98px) {
-  .showcase {
-    overflow: hidden !important;
   }
-
+  
+  /* 大於寬度1200 大於高度750 */
+  @media (min-width: 1200px) and (min-height: 750px) and (max-height: 1049.98px) { .showcase {
+  overflow: hidden !important;
+  }
+  
   #exploration>section>div:first-child {
-
-    overflow: visible !important;
-    height: calc(60vh);
+  
+  overflow: visible !important;
+  height: calc(60vh);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(60vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(60vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 8vh;
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 8vh;
   }
-
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 8vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 8vh;
+  
   }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-    margin-bottom: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  margin-bottom: 2rem;
   }
-
+  
   /*探索圖片位置*****/
   .right {
-    margin-right: -20vh;
+  margin-right: -20vh;
   }
-
+  
   .left {
-    margin-left: -20vh;
+  margin-left: -20vh;
   }
-
-
-}
-
-/* 大於寬度992 小於高度749.98 */
-@media (min-width: 992px) and (max-width: 1199.98px) and (max-height: 749.98px) {
-  #exploration .showcase:nth-child(5) div:first-child {
-
-    overflow: hidden !important;
-    height: calc(100vh - 110px);
+  
+  
   }
-
+  
+  /* 大於寬度992 小於高度749.98 */
+  @media (min-width: 992px) and (max-width: 1199.98px) and (max-height: 749.98px) { #exploration .showcase:nth-child(5) div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(100vh - 110px);
+  }
+  
   #exploration>section>div:first-child {
-
-    overflow: hidden !important;
-    height: calc(100vh - 110px);
+  
+  overflow: hidden !important;
+  height: calc(100vh - 110px);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(100vh - 110px);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(100vh - 110px);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   .right {
-    margin-right: -20vh;
+  margin-right: -20vh;
   }
-
+  
   .left {
-    margin-left: -20vh;
+  margin-left: -20vh;
   }
-
+  
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 10vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 10vh;
+  
   }
-
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 10vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 10vh;
+  
   }
-
+  
   .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-    margin-bottom: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  margin-bottom: 2rem;
   }
-}
-
-/* 大於寬度992 大於高度750*/
-@media (min-width: 992px) and (max-width: 1199.98px) and (min-height: 750px) and (max-height: 991.98px) {
+  }
+  
+  /* 大於寬度992 大於高度750 and (max-height: 991.98px) */ @media (min-width: 992px) and (max-width: 1199.98px) and (min-height: 750px) { #exploration>section:nth-child(5)>div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(50vh);
+  }
+  
+  #exploration>section>div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(50vh);
+  }
+  
+  #exploration>section:nth-child(5)>div:first-child>div:first-child {
+  
+  overflow: hidden !important;
+  
+  }
+  .showcase .showcase-img {
+  width: auto;
+  height: calc(50vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
+  }
+  
+  .showcase .showcase-text {
+  padding: 2.5rem;
+  }
+  
+  .right {
+  margin-right: -20vh;
+  }
+  
+  .left {
+  margin-left: -20vh;
+  }
+  
+  .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 8vh;
+  
+  }
+  
+  #exploration>section:nth-child(3) .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 8vh;
+  
+  }
+  
+  .p-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  margin-bottom: 1rem;
+  }
+  
+  
+  }
+  
+  /* 大於寬度992 大於高度992*/
+  @media (min-width: 992px) and (max-width: 1199.98px) and (min-height: 992px) { #exploration>section:nth-child(5)>div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(60vh);
+  }
+  
+  #exploration>section>div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(60vh);
+  }
+  
+  #exploration>section:nth-child(5)>div:first-child>div:first-child {
+  
+  overflow: hidden !important;
+  
+  }
+  .showcase .showcase-img {
+  width: auto;
+  height: calc(60vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
+  }
+  .right {
+  margin-right: -25vh;
+  }
+  
+  .left {
+  margin-left: -25vh;
+  }
+  
+  
+  
+  }
+  /* 大於寬度992 大於高度992*/
+  @media (min-width: 992px) and (max-width: 1199.98px) and (min-height: 1198.98px) { #exploration>section:nth-child(5)>div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(40vh);
+  }
+  
+  #exploration>section>div:first-child {
+  
+  overflow: hidden !important;
+  height: calc(40vh);
+  }
+  
+  #exploration>section:nth-child(5)>div:first-child>div:first-child {
+  
+  overflow: hidden !important;
+  
+  }
+  .showcase .showcase-img {
+  width: auto;
+  height: calc(40vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
+  }
+  .right {
+  margin-right: -10vh;
+  }
+  
+  .left {
+  margin-left: -10vh;
+  }
+  
+  
+  
+  }
+  
+  /* 大於寬度768 小於高度749.98 */
+  @media (min-width: 768px) and (max-width: 991.98px) and (max-height: 749.98px) {
+  
   #exploration>section:nth-child(5)>div:first-child {
-
-    overflow: hidden !important;
-    height: calc(60vh);
+  
+  overflow: hidden !important;
+  
   }
-
+  
   #exploration>section>div:first-child {
-
-    overflow: hidden !important;
-    height: calc(60vh);
+  
+  overflow: hidden !important;
+  height: calc(80vh - 110px);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(60vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  max-height: calc(80vh - 110px);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
-  .showcase .showcase-text {
-    padding: 2.5rem;
-  }
-
-  .right {
-    margin-right: -20vh;
-  }
-
-  .left {
-    margin-left: -20vh;
-  }
-
+  
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 8vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 10vh;
+  
   }
-
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 8vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 10vh;
+  
   }
-
-  .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 9;
-    margin-bottom: 1rem;
-  }
-
-
-}
-
-/* 大於寬度992 大於高度750*/
-@media (min-width: 992px) and (max-width: 1199.98px) and (min-height: 992px) {
-
-  .right {
-    margin-right: -30vh;
-  }
-
-  .left {
-    margin-left: -30vh;
-  }
-
-
-
-}
-
-/* 大於寬度768 小於高度749.98 */
-@media (min-width: 768px) and (max-width: 991.98px) and (max-height: 749.98px) {
-
-  #exploration>section:nth-child(5)>div:first-child {
-
-    overflow: hidden !important;
-
-  }
-
-  #exploration>section>div:first-child {
-
-    overflow: hidden !important;
-    height: calc(80vh - 110px);
-  }
-
-  .showcase .showcase-img {
-    width: auto;
-    max-height: calc(80vh - 110px);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-  }
-
-  .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 10vh;
-
-  }
-
-  #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 10vh;
-
-  }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   /*探索圖片位置*****/
-
+  
   .right {
-    margin-right: -15vh;
+  margin-right: -15vh;
   }
-
+  
   .left {
-    margin-left: -15vh;
+  margin-left: -15vh;
   }
-
+  
   .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    margin-bottom: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  margin-bottom: 2rem;
   }
-
-}
-
-/* 大於寬度768 大於高度750 */
-@media (min-width: 768px) and (max-width: 991.98px) and (min-height: 750px) {
-
+  
+  }
+  
+  /* 大於寬度768 大於高度750 */
+  @media (min-width: 768px) and (max-width: 991.98px) and (min-height: 750px) {
+  
   #exploration>section:nth-child(5)>div:first-child {
-
-    overflow: visible !important;
-    height: calc(50vh);
+  
+  overflow: visible !important;
+  height: calc(50vh);
   }
-
+  
   #exploration>section>div:first-child {
-
-    overflow: hidden !important;
-    height: calc(50vh);
+  
+  overflow: hidden !important;
+  height: calc(50vh);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(50vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(50vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 10vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 10vh;
+  
   }
-
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 10vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 10vh;
+  
   }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   /*探索圖片位置*****/
-
+  
   .right {
-    margin-right: -25vh;
+  margin-right: -25vh;
   }
-
+  
   .left {
-    margin-left: -25vh;
+  margin-left: -25vh;
   }
-
+  
   .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    margin-bottom: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  margin-bottom: 2rem;
   }
-
-}
-
-/* 大於寬度576 小於高度749.98 */
-@media (min-width: 576px) and (max-width: 767.98px) and (max-height: 749.98px) {
-  .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 5vh;
-
+  
   }
-
+  
+  /* 大於寬度576 小於高度749.98 */
+  @media (min-width: 576px) and (max-width: 767.98px) and (max-height: 749.98px) { .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 5vh;
+  
+  }
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 5vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 5vh;
+  
   }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
+  
   #exploration .showcase div>div:first-child {
-    overflow: visible !important;
-    height: calc(55vh);
+  overflow: visible !important;
+  height: calc(55vh);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(55vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-
+  width: auto;
+  height: calc(55vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
   }
-
+  
   #exploration>section:nth-child(5) .showcase-img {
-    width: 100% !important;
-    height: auto !important;
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-
+  width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
   }
-
-
-
+  
+  
+  
   .p-truncate {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
   }
-
-}
-
-/* 大於寬度576 大於高度750 */
-@media (min-width: 576px) and (max-width: 767.98px) and (min-height: 750px) {
-  .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 5vh;
-
+  
   }
-
+  
+  /* 大於寬度576 小於寬度767大於高度750 小於高度1049.98*/
+  @media (min-width: 576px) and (max-width: 767.98px) and (min-height: 750px) and (max-height: 1049.98px) { .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 5vh;
+  
+  }
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 5vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 5vh;
+  
   }
-
+  
   .showcase .showcase-text {
-    padding: 2.5rem;
+  padding: 2.5rem;
   }
-
-
+  
+  
   #exploration>section>div>div:first-child {
-    overflow: visible !important;
-    height: calc(55vh);
+  overflow: visible !important;
+  height: calc(55vh);
   }
-
+  
   .sm-glory {
-    /*榮耀願景小版分類圖特殊設定*/
-    overflow: hidden !important;
-    height: calc(55vh);
+  /*榮耀願景小版分類圖特殊設定*/
+  overflow: hidden !important;
+  height: calc(55vh);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(55vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-
+  width: auto;
+  height: calc(55vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
   }
-
+  
   #exploration>section:nth-child(5) .showcase-img {
-    width: auto !important;
-    height: 120% !important;
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-
+  width: auto !important;
+  height: 120% !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
   }
-
-
-
+  
+  
+  
   .p-truncate {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
   }
-
-}
-
-/* 大於375 小於575.98 大於高750*/
-@media (min-width: 375px) and (max-width: 575.98px) and (min-height: 750px) {
-  .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 5vh;
+  
   }
-
+  /* 大於寬度576 小於寬度767大於高度750 大於高度1050*/
+  @media (min-width: 576px) and (max-width: 767.98px) and (min-height: 1050px) { .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 5vh;
+  
+  }
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 5vh;
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 5vh;
+  
   }
-
-  #exploration .showcase div>div:first-child {
-    overflow: visible !important;
-    height: calc(40vh);
-  }
-
-  .sm-glory {
-    /*榮耀願景小版分類圖特殊設定*/
-    overflow: hidden !important;
-    height: calc(40vh);
-  }
-
-  .showcase .showcase-img {
-    width: auto;
-    height: calc(40vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-  }
-
-  #exploration>section:nth-child(5) .showcase-img {
-    width: 100% !important;
-    height: auto !important;
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
-
-  }
-
+  
   .showcase .showcase-text {
-    padding: 1.5rem;
+  padding: 2.5rem;
   }
-}
-
-/* 大於375 小於575.98 小於高749*/
-@media (min-width: 375px) and (max-width: 575.98px) and (max-height: 749.98px) {
-  .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 5vh;
+  
+  
+  #exploration>section>div>div:first-child {
+  overflow: visible !important;
+  height: calc(40vh);
   }
-
-  #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 5vh;
-
-  }
-
-  #exploration .showcase div>div:first-child {
-    overflow: visible !important;
-    height: calc(50vh);
-  }
-
+  
   .sm-glory {
-    /*榮耀願景小版分類圖特殊設定*/
-
-    overflow: hidden !important;
-    height: calc(50vh);
+  /*榮耀願景小版分類圖特殊設定*/
+  overflow: hidden !important;
+  height: calc(40vh);
   }
-
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(50vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(40vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
   }
-
+  
+  #exploration>section .showcase-img {
+  width: auto !important;
+  height: calc(40vh) !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
+  }
+  
+  
+  
+  .p-truncate {
+  margin-bottom: 3rem;
+  }
+  
+  }
+  
+  /* 大於375 小於575.98 大於高750*/
+  @media (min-width: 375px) and (max-width: 575.98px) and (min-height: 750px) { .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 5vh;
+  }
+  
+  #exploration>section:nth-child(3) .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 5vh;
+  }
+  
+  #exploration .showcase div>div:first-child {
+  overflow: visible !important;
+  height: calc(40vh);
+  }
+  
+  .sm-glory {
+  /*榮耀願景小版分類圖特殊設定*/
+  overflow: hidden !important;
+  height: calc(40vh);
+  }
+  
+  .showcase .showcase-img {
+  width: auto;
+  height: calc(40vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  }
+  
+  #exploration>section:nth-child(5) .showcase-img {
+  width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  
+  }
+  
+  .showcase .showcase-text {
+  padding: 1.5rem;
+  }
+  }
+  
+  /* 大於375 小於575.98 小於高749*/
+  @media (min-width: 375px) and (max-width: 575.98px) and (max-height: 749.98px) { .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 5vh;
+  }
+  
+  #exploration>section:nth-child(3) .bg-circle {
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 5vh;
+  
+  }
+  
+  #exploration .showcase div>div:first-child {
+  overflow: visible !important;
+  height: calc(50vh);
+  }
+  
+  .sm-glory {
+  /*榮耀願景小版分類圖特殊設定*/
+  
+  overflow: hidden !important;
+  height: calc(50vh);
+  }
+  
+  .showcase .showcase-img {
+  width: auto;
+  height: calc(50vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
+  }
+  
   section:nth-child(5) .showcase-img {
-    width: auto !important;
-    height: 100% !important;
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto !important;
+  height: 100% !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .showcase .showcase-text {
-    padding: 1.5rem;
+  padding: 1.5rem;
   }
-
+  
   .right {
-    margin-right: -5vh;
+  margin-right: -5vh;
   }
-
+  
   .left {
-    margin-left: -5vh;
+  margin-left: -5vh;
   }
-}
-
-@media (max-width: 374.98px) {
+  }
+  
+  @media (max-width: 374.98px) {
   .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: left 8vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: left 8vh;
+  
   }
-
+  
   #exploration>section:nth-child(3) .bg-circle {
-    background: url(../img/circle.svg) no-repeat;
-    background-size: cover;
-    background-position: right 8vh;
-
+  background: url(../img/circle.svg) no-repeat;
+  background-size: cover;
+  background-position: right 8vh;
+  
   }
-
+  
   #exploration .showcase div>div:first-child {
-    overflow: visible !important;
-    height: calc(40vh);
+  overflow: visible !important;
+  height: calc(40vh);
   }
-
+  
   .sm-glory {
-    /*榮耀願景小版分類圖特殊設定*/
-
-    overflow: hidden !important;
-    height: calc(40vh);
+  /*榮耀願景小版分類圖特殊設定*/
+  
+  overflow: hidden !important;
+  height: calc(40vh);
   }
-
-
+  
+  
   .showcase .showcase-img {
-    width: auto;
-    height: calc(40vh);
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto;
+  height: calc(40vh);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   #exploration>section:nth-child(5) .showcase-img {
-    width: auto !important;
-    height: 100% !important;
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    border-radius: inherit;
-    outline: 0;
+  width: auto !important;
+  height: 100% !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border-radius: inherit;
+  outline: 0;
   }
-
+  
   .showcase .showcase-text {
-    padding: 1.5rem;
+  padding: 1.5rem;
   }
-
+  
   .right {
-    margin-right: -5vh;
+  margin-right: -5vh;
   }
-
+  
   .left {
-    margin-left: -5vh;
+  margin-left: -5vh;
   }
-
+  
   .p-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-    margin-bottom: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  margin-bottom: 2rem;
   }
-
-}
+  
+  }
+  
 
 @media (max-width: 767.98px) {
   .circle-l {
