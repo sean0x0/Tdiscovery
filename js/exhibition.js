@@ -11,29 +11,14 @@ window.onload = function () {
     
       window.clearTimeout(timer)
       timer = window.setTimeout(function () {
-        console.log('scroll event') //callback your coding
-      }, 100)
-      $(".list-bullet ul li").removeClass("hollow");
+        $(".list-bullet ul li").removeClass("hollow");
       $(".map section").removeClass("read");
+      }, 100)
+      
     
 
 
   });
-  //const bulletLast = $(".list-bullet li").siblings();
-
-  //$(bulletLast).removeClass("hollow");
-
-  /*const tabRepair = $(".norian:nth-child(5)");
-  const itemGlory = $(".norian:nth-child(6) a").hasClass("active") ;
-  const itemRoom = $(".norian:nth-child(7) a").hasClass("active");
-
-  if(itemGlory || itemRoom){
-    $("#subNav").removeClass("justify-content-start");
-    $("#subNav").addClass("justify-content-end");
-  }else{
-    $("#subNav").removeClass("justify-content-end");
-    $("#subNav").addClass("justify-content-start");
-  }*/
 
   //修正花魁車次選單底線樣式
   if ($("#orianTab > a").hasClass("active")) {
@@ -476,7 +461,7 @@ window.onload = function () {
       venue: "B",
       title: "世界高鐵",
       desciption:
-        "世界第一條高速鐵路，為1964年10月1日通車的日本東海道新幹線，並開行新幹線0系列車，時速最高可達210公里。目前已有28個國家擁有高速鐵路系統，以日本（新幹線）、法國（TGV）、德國（ICE）為主要研發製造高鐵列車與核心系統的國家，世界各國改良或研發高鐵，如西班牙的Talgo是開發自法國TGV技術；中國的和諧號（CRH）是集結瑞典Regina C2008、日本新幹線E2系及德國ICE3車體與技術所發展出來。台灣則在2007年完成通車，加入世界高鐵的大家庭。"
+        "世界第一條高速鐵路，為1964年10月1日通車的日本東海道新幹線，並開行新幹線0系列車，時速最高可達210公里。目前有28個國家擁有高速鐵路系統，以日本新幹線、法國TGV、德國ICE為主要研發製造高鐵列車與核心系統的國家，世界各國改良或研發高鐵，如西班牙的Talgo是開發自法國TGV技術；中國和諧號CRH是集結瑞典Regina C2008、日本新幹線E2系及德國ICE3車體與技術發展出來。台灣在2007年完成通車，加入世界高鐵的大家庭。"
     },
     {
       number: "23",
@@ -566,7 +551,7 @@ window.onload = function () {
 
           <figure class="row d-flex figure mx-auto pt-md-5 pt-xl-6 pb-md-5 container-xxl p-4 px-xxl-0">
 
-<div id="carouselExampleIndicators${indexArea}${index}" class="col-xxl-7 col-md-10 col-lg-8 carousel slide carousel-fade px-0 ml-lg-12 ml-xxl-0" data-ride="carousel" >
+<div id="carouselExampleIndicators${indexArea}${index}" class="col-xxl-7 col-md-10 col-lg-8 carousel slide carousel-fade px-0 ml-lg-12 ml-xxl-0" data-ride="false" data-touch="false" data-interval="false" >
   <ol class="carousel-indicators">
   ${carouselLi}
 
@@ -676,9 +661,9 @@ window.onload = function () {
 
         const windowTop = $(window).scrollTop();
         const navHeight = $("#nav").height() + 100;
-
-        const top =
-          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top - navHeight - 1;
+        var $el = $(`.area-${1 + indexArea} .list-sec${index + 1}`); 
+        
+        const top = $el.position().top - $el.outerHeight(true) - 1;
         const topItem = $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top;
 
         const bottomItem = $(bulletLast).position().top;
@@ -719,13 +704,14 @@ window.onload = function () {
 
       bulletThis.on("click", function () { //左邊展區小圓圈連結 點擊滑動到該展區頂部
 
-        const navHeight = $("#nav").height() + 100; //
-        const top =
-          $(`.area-${1 + indexArea} .list-sec${index + 1}`).position().top -
-          navHeight;
-
-        $("body, html").animate({ scrollTop: top }, 1000);
-      });
+       
+        const navHeight = $("#nav").height() + 100;
+        var $el = $(`.area-${1 + indexArea} .list-sec${index + 1}`); 
+        
+        const top = $el.position().top - $el.outerHeight(true) + navHeight;
+        
+        $("body, html").animate({ scrollTop: top }, 1000); });
+        
     });
   };
 

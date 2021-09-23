@@ -25,4 +25,3 @@ $(".hamburger").click(function () { //點擊漢堡選單時，小預約按鈕淡
   $("#small-booking").fadeToggle(250);
   $("body").toggleClass("overflow-hidden");
 });
-
